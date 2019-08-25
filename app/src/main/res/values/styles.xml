@@ -1,0 +1,81 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:typeface">serif</item>
+        <item name="android:fontFamily">@string/default_font</item>
+
+    </style>
+
+    <style name="AppTheme.DashboardTheme">
+        <!--display drawer over status bar transparent-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:fontFamily">@string/default_font</item>
+    </style>
+
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:fontFamily">@string/default_font</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:fontFamily">@string/default_font</item>
+    </style>
+
+    <style name="ButtonGradiant" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:background">@drawable/button_effect</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="editText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="editText_ragister" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@drawable/background_with_shadow</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:paddingRight">35dp</item>
+        <item name="android:paddingEnd">35dp</item>
+    </style>
+
+    <style name="spinner_ragister" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@drawable/background_with_shadow</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    
+    <style name="CardPaddingStyle">
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+</resources>

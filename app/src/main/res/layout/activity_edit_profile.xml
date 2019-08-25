@@ -1,0 +1,1573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mega.matrimony.Activities.EditProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/gradient_button"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lay_basic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/et_f_name"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter First Name"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/et_l_name"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Last Name"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/heart_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spin_mari"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp"
+                            app:backgroundTint="@color/red" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_t_child"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/dob_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_t_child"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_child_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/dob_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_child_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/tongue_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_tongue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <com.mega.matrimony.Custom.MultiSelectionSpinner
+                            android:id="@+id/spin_lang"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:backgroundTint="@color/red"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/height_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_height"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/weight_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/et_dob"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="Date of Birth (31-01-1990)"
+                        android:inputType="none"
+                        android:maxLines="1" />
+
+                    <Button
+                        android:id="@+id/btn_basic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_effect"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/White" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_life"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_body"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/eat_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_eat"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/smok_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_smok"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/drink_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_drink"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/hoby_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_skin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_blood"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_life"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_effect"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/White" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_with_shadow">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/about_pink" />
+
+                        <EditText
+                            android:id="@+id/et_about"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="top"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:textColor="@color/black"
+                            android:hint="Write something about Yourself"
+                            android:inputType="textMultiLine"
+                            android:paddingRight="35dp"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="10dp" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/et_hoby"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Hobby"
+                        android:maxLines="1"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/et_birth_place"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Birth Place"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/et_birth_time"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="Enter Birth Time"
+                        android:inputType="none"
+                        android:maxLines="1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_created"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_reference"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_effect"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/White" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_reli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/religion_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_religion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/caste_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_caste"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/et_sub_caste"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Sub Caste"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/clip_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_manglik"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/star_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_star"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/horo_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_horo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/et_gothra"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Gothra"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_moon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_reli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_effect"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/White" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_loca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/country_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_country"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/state_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/city_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_with_shadow">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/pin_location" />
+
+                        <EditText
+                            android:id="@+id/et_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="top"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:textColor="@color/black"
+                            android:hint="Address"
+                            android:inputType="textMultiLine"
+                            android:paddingRight="35dp"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="10dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.rilixtech.CountryCodePicker
+                            android:id="@+id/spin_code"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="0.45"
+                            android:background="@drawable/background_with_shadow"
+                            android:gravity="center"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp" />
+
+                        <EditText
+                            android:id="@+id/et_mobile"
+                            style="@style/editText_ragister"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.55"
+                            android:hint="Enter Mobile Number"
+                            android:inputType="phone"
+                            android:maxLength="13"
+                            android:maxLines="1"
+                            android:paddingLeft="15dp"
+                            android:paddingEnd="30dp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Phone"
+                        android:inputType="phone"
+                        android:maxLength="13"
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/et_time_call"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Time to call"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/city_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_residence"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_loca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_effect"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/White" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_edu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/edu_pink" />
+
+                        <com.mega.matrimony.Custom.MultiSelectionSpinner
+                            android:id="@+id/spin_edu"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:backgroundTint="@color/red"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_emp_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/money_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_income"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_occupation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/desi_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_designation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_edu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_effect"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/White" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_family"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/family_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_family_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/et_father_name"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Father Name"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/et_father_ocu"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Father Occupation"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/et_mother_name"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Mother Name"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/et_mother_ocu"
+                        style="@style/editText_ragister"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Mother Occupation"
+                        android:inputType="text"
+                        android:maxLines="1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/family_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_family_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_no_bro"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_no_mari_bro"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_no_sis"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_with_shadow"
+                        android:paddingEnd="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="10dp"
+                            android:src="@drawable/user_pink" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                            android:id="@+id/spin_no_mari_sis"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="37dp"
+                            android:paddingLeft="37dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_with_shadow">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/about_pink" />
+
+                        <EditText
+                            android:id="@+id/et_about_family"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="top"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:textColor="@color/black"
+                            android:hint="Write About Your Family"
+                            android:inputType="textMultiLine"
+                            android:paddingRight="35dp"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="10dp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_family"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_effect"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/White" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

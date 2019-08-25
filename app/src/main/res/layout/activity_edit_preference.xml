@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mega.matrimony.Activities.EditPreferenceActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/gradient_button"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_basic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/heart_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_looking"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/hoby_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_complx"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/height_pink" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                        android:id="@+id/spin_height_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/height_pink" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                        android:id="@+id/spin_height_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/dob_pink" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                        android:id="@+id/spin_age_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/dob_pink" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                        android:id="@+id/spin_age_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/user_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_body_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/eat_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_eat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="37dp"
+                        app:backgroundTint="@color/red"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/smok_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_smok"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/drink_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_drink"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/tongue_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_mtongue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_with_shadow">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/about_pink" />
+
+                    <EditText
+                        android:id="@+id/et_expcts"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_gravity="top"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:paddingRight="35dp"
+                        android:textColor="@color/black"
+                        android:hint="Write Expectations"
+                        android:inputType="textMultiLine"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="10dp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_basic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/round_effect"
+                    android:text="@string/btn_update"
+                    android:textAllCaps="false"
+                    android:textColor="@color/White" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_reli"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/religion_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_religion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/caste_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_caste"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/clip_pink" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                        android:id="@+id/spin_manglik"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/star_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_reli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/round_effect"
+                    android:text="@string/btn_update"
+                    android:textAllCaps="false"
+                    android:textColor="@color/White" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_edu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_with_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    >
+
+                    <ImageView
+                        android:padding="10dp"
+                        android:src="@drawable/edu_pink"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:paddingLeft="37dp"
+                        android:paddingStart="37dp"
+                        app:backgroundTint="@color/red"
+                        android:id="@+id/spin_edu"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_with_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    >
+
+                    <ImageView
+                        android:padding="10dp"
+                        android:src="@drawable/user_pink"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:paddingLeft="37dp"
+                        android:paddingStart="37dp"
+                        app:backgroundTint="@color/red"
+                        android:id="@+id/spin_emp_in"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_with_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    >
+
+                    <ImageView
+                        android:padding="10dp"
+                        android:src="@drawable/user_pink"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:paddingLeft="37dp"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:id="@+id/spin_occupation"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_with_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    >
+
+                    <ImageView
+                        android:padding="10dp"
+                        android:src="@drawable/desi_pink"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:paddingLeft="37dp"
+                        android:paddingStart="37dp"
+                        app:backgroundTint="@color/red"
+                        android:id="@+id/spin_designation"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_with_shadow"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    >
+
+                    <ImageView
+                        android:padding="10dp"
+                        android:src="@drawable/money_pink"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                    <android.support.v7.widget.AppCompatSpinner
+                        app:backgroundTint="@color/red"
+                        android:paddingLeft="37dp"
+                        android:paddingStart="37dp"
+                        android:id="@+id/spin_income"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_edu"
+                    android:text="@string/btn_update"
+                    android:textAllCaps="false"
+                    android:textColor="@color/White"
+                    android:background="@drawable/round_effect"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_loca"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/country_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/state_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/city_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_with_shadow"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/city_pink" />
+
+                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        android:id="@+id/spin_residence"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="@color/red"
+                        android:paddingStart="37dp"
+                        android:paddingLeft="37dp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_loca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/round_effect"
+                    android:text="@string/btn_update"
+                    android:textAllCaps="false"
+                    android:textColor="@color/White" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

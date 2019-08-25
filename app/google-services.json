@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "301888081120",
+    "firebase_url": "https://megamatrimony.firebaseio.com",
+    "project_id": "megamatrimony",
+    "storage_bucket": "megamatrimony.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301888081120:android:52337e36b0624987",
+        "android_client_info": {
+          "package_name": "com.mega.matrimony"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301888081120-7l2fit53ko6805ka8q19d3j3tqread8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi05EmLnY2Z6HLiRnMlAuOhF4j_AWFUWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301888081120-7l2fit53ko6805ka8q19d3j3tqread8k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "301888081120-7ckvij9dl7bc55sgno65c7d74gb32s8v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mega.matrimony",
+                "app_store_id": "1404185083"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

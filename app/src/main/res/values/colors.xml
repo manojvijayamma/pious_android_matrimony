@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff041a</color>
+    <color name="colorPrimaryDark">#fa004a</color>
+    <color name="colorAccent">#fc17ae</color>
+    <color name="White">#ffffff</color>
+    <color name="black">#4c5352</color>
+    <color name="red">#fa004a</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="green">#29d912</color>
+    <color name="dark_slate_gray">#2F4F4F</color>
+    <color name="gray_2">#AFAFAF</color>
+    <color name="gray_1">#C0C0C0</color>
+    <color name="gray_background">#757575</color>
+    <color name="yellow">#FFBB33</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="mark_background">#56c2063b</color>
+    <color name="unmark_background">#00ffffff</color>
+
+    <color name="lighter_gray">#20778286</color>
+    <color name="divider_color">#20778286</color>
+    <color name="bottom_divider_color">@color/divider_color</color>
+    <color name="register_divider_gray">#C0C0C0</color>
+
+    <color name="gradient_start">#FE0427</color>
+    <color name="gradient_center">#FD0F71</color>
+    <color name="gradient_end">#fc16ad</color>
+</resources>

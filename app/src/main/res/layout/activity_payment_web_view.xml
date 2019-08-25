@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/web_payment"
+    tools:context="com.mega.matrimony.Activities.PaymentWebView">
+</WebView>
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:com="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PaymentWebView">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/gradient_button"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        com:layout_constraintEnd_toEndOf="parent"
+        com:layout_constraintStart_toStartOf="parent"
+        com:layout_constraintTop_toTopOf="parent"
+        com:layout_scrollFlags="scroll|enterAlways"
+        com:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <WebView
+        android:id="@+id/web_payment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        com:layout_constraintBottom_toBottomOf="parent"
+        com:layout_constraintEnd_toEndOf="parent"
+        com:layout_constraintStart_toStartOf="parent"
+        com:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+</android.support.constraint.ConstraintLayout>-->

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="5dp"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+       >
+
+        <RadioGroup
+            android:id="@+id/grp_interest"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:padding="10dp"
+                android:text="I am interested in your profile. Please 'Accept' if you are interested."
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:padding="10dp"
+                android:text="You are the kind of person we have been looking for. Please respond to proceed further."
+
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:padding="10dp"
+                android:text="We liked your profile and interested tp take it forward. Please reply at the earliest."
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:padding="10dp"
+                android:text="You seem to be the kind of person who suits our family. We would like to contact your parents to proceed further."
+
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:padding="10dp"
+                android:text="Your profile matches my sister's/brother's profile. Please 'Accept' if you are interested."
+
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:padding="10dp"
+                android:text="Our children's profile seems to match. Please reply to proceed further."
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:padding="10dp"
+                android:text="We find a good life partner in you for our friend. Please reply to proceed further."
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_send_intr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:background="@drawable/gradient_button"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="Send Interest"
+        android:textColor="#fff" />
+    </LinearLayout>
+
+</LinearLayout>

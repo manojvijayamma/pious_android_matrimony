@@ -539,7 +539,8 @@
                                                     android:layout_marginLeft="5dp"
                                                     android:layout_weight="1"
                                                     android:orientation="vertical"
-                                                    android:padding="5dp">
+                                                    android:padding="5dp"
+                                                    android:visibility="gone">
 
                                                     <TextView
 
@@ -572,7 +573,8 @@
                                                     android:layout_height="wrap_content"
                                                     android:layout_weight="1"
                                                     android:orientation="vertical"
-                                                    android:padding="5dp">
+                                                    android:padding="5dp"
+                                                    android:visibility="gone">
 
                                                     <TextView
 
@@ -603,7 +605,8 @@
                                                     android:layout_marginLeft="5dp"
                                                     android:layout_weight="1"
                                                     android:orientation="vertical"
-                                                    android:padding="5dp">
+                                                    android:padding="5dp"
+                                                    android:visibility="gone">
 
                                                     <TextView
 
@@ -636,7 +639,8 @@
                                                     android:layout_height="wrap_content"
                                                     android:layout_weight="1"
                                                     android:orientation="vertical"
-                                                    android:padding="5dp">
+                                                    android:padding="5dp"
+                                                    android:visibility="gone">
 
                                                     <TextView
 
@@ -666,7 +670,8 @@
                                                     android:layout_marginLeft="5dp"
                                                     android:layout_weight="1"
                                                     android:orientation="vertical"
-                                                    android:padding="5dp">
+                                                    android:padding="5dp"
+                                                    android:visibility="gone">
 
                                                     <TextView
 
@@ -992,7 +997,8 @@
                                                     android:layout_marginLeft="5dp"
                                                     android:layout_weight="1"
                                                     android:orientation="vertical"
-                                                    android:padding="5dp">
+                                                    android:padding="5dp"
+                                                    android:visibility="gone">
 
                                                     <TextView
 
@@ -1025,7 +1031,9 @@
                                                     android:layout_height="wrap_content"
                                                     android:layout_weight="1"
                                                     android:orientation="vertical"
-                                                    android:padding="5dp">
+                                                    android:padding="5dp"
+                                                    android:visibility="gone"
+                                                    android:visibility="gone">
 
                                                     <TextView
 

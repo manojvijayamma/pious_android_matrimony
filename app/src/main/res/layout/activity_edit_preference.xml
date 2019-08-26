@@ -525,7 +525,8 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/background_with_shadow"
                     android:paddingEnd="10dp"
-                    android:paddingRight="10dp">
+                    android:paddingRight="10dp"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -643,6 +644,7 @@
                     android:background="@drawable/background_with_shadow"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
+                    android:visibility="gone"
                     >
 
                     <ImageView
@@ -742,6 +744,7 @@
                     android:background="@drawable/background_with_shadow"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
+                    android:visibility="gone"
                     >
 
                     <ImageView

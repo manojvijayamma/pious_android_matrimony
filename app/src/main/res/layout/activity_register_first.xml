@@ -610,7 +610,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/background_with_shadow"
                         android:paddingEnd="10dp"
-                        android:paddingRight="10dp">
+                        android:paddingRight="10dp"
+                        android:visibility="gone">
 
                         <ImageView
                             android:layout_width="40dp"
@@ -642,7 +643,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/background_with_shadow"
                         android:paddingEnd="10dp"
-                        android:paddingRight="10dp">
+                        android:paddingRight="10dp"
+                        android:visibility="gone">
 
                         <ImageView
                             android:layout_width="40dp"
@@ -1070,7 +1072,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/background_with_shadow"
                         android:paddingEnd="10dp"
-                        android:paddingRight="10dp">
+                        android:paddingRight="10dp"
+                        android:visibility="gone">
 
                         <ImageView
                             android:layout_width="40dp"
@@ -1102,7 +1105,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/background_with_shadow"
                         android:paddingEnd="10dp"
-                        android:paddingRight="10dp">
+                        android:paddingRight="10dp"
+                        android:visibility="gone">
 
                         <ImageView
                             android:layout_width="40dp"
@@ -1134,7 +1138,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/background_with_shadow"
                         android:paddingEnd="10dp"
-                        android:paddingRight="10dp">
+                        android:paddingRight="10dp"
+                        android:visibility="gone">
 
                         <ImageView
                             android:layout_width="40dp"
@@ -1167,7 +1172,8 @@
                         android:inputType="text"
                         android:maxLines="1"
                         android:paddingEnd="35dp"
-                        android:paddingRight="35dp" />
+                        android:paddingRight="35dp"
+                        android:visibility="gone" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -1176,7 +1182,8 @@
                         android:layout_marginTop="10dp"
                         android:background="@drawable/background_with_shadow"
                         android:paddingEnd="10dp"
-                        android:paddingRight="10dp">
+                        android:paddingRight="10dp"
+                        android:visibility="gone">
 
                         <ImageView
                             android:layout_width="40dp"

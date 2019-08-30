@@ -562,7 +562,7 @@
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:padding="5dp"
-                                                        android:text="Religion" />
+                                                        android:text="Community" />
 
                                                     <TextView
                                                         android:layout_width="wrap_content"
@@ -592,7 +592,7 @@
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:padding="5dp"
-                                                        android:text="Caste" />
+                                                        android:text="Diocese" />
 
                                                     <TextView
                                                         android:layout_width="wrap_content"
@@ -2627,7 +2627,7 @@
                                                             android:layout_width="wrap_content"
                                                             android:layout_height="wrap_content"
                                                             android:padding="5dp"
-                                                            android:text="Religion" />
+                                                            android:text="Community" />
 
                                                         <TextView
                                                             android:layout_width="wrap_content"
@@ -2657,7 +2657,7 @@
                                                             android:layout_width="wrap_content"
                                                             android:layout_height="wrap_content"
                                                             android:padding="5dp"
-                                                            android:text="Caste" />
+                                                            android:text="Diocese" />
 
                                                         <TextView
                                                             android:layout_width="wrap_content"

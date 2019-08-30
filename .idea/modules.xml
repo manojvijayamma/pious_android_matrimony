@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MegaMatrimony.iml" filepath="$PROJECT_DIR$/MegaMatrimony.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pious_android_matrimony.iml" filepath="$PROJECT_DIR$/pious_android_matrimony.iml" />
     </modules>
   </component>
 </project>

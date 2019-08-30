@@ -93,7 +93,7 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
     Button btn_male, btn_female, btn_login, btn_first_submit, btn_second_prev, btn_second_submit,
             btn_third_submit, btn_third_prev, btn_four_submit, btn_four_prev, btn_five_submit, btn_five_prev, btn_choose,
             btn_six_submit, btn_six_prev, btn_fb_signup;
-    EditText et_f_name, et_l_name, et_email, et_password, et_mobile, et_dob, et_sub_caste, et_gothra, et_hoby, et_about;
+    EditText et_f_name, et_l_name, et_email, et_password, et_mobile, et_dob, et_sub_caste, et_gothra, et_hoby, et_about, et_other_caste, et_other_city, et_other_education, et_other_occupation, et_other_designation;
     Common common;
     Spinner spin_religion, spin_caste, spin_tongue, spin_country, spin_state, spin_city, spin_mari, spin_t_child, spin_child_status,
             spin_emp_in, spin_income, spin_occupation, spin_designation, spin_height, spin_weight, spin_eat, spin_smok, spin_drink,
@@ -159,6 +159,12 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
         et_email = (EditText) findViewById(R.id.et_email);
         et_password = (EditText) findViewById(R.id.et_password);
         pass_input = (TextInputLayout) findViewById(R.id.pass_input);
+
+        et_other_caste = (EditText) findViewById(R.id.et_other_caste);
+        et_other_city = (EditText) findViewById(R.id.et_other_city);
+        et_other_education = (EditText) findViewById(R.id.et_other_education);
+        et_other_occupation = (EditText) findViewById(R.id.et_other_occupation);
+        et_other_designation = (EditText) findViewById(R.id.et_other_designation);
 
         tv_gallary.setOnClickListener(this);
         tv_camera.setOnClickListener(this);
@@ -423,33 +429,11 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
                 }
             });
 
-            spin_moon = (Spinner) findViewById(R.id.spin_moon);
-            List<String> moon = common.getListFromArray(MyApplication.getSpinData().getJSONArray("moonsign_list"), "Moonsign");
-            moon_map = common.getMapFromArray(MyApplication.getSpinData().getJSONArray("moonsign_list"), "Moonsign");
-            ArrayAdapter adp_moon = new ArrayAdapter<String>(this, R.layout.spinner_item, moon);
-            spin_moon.setAdapter(adp_moon);
-            spin_moon.setOnItemSelectedListener(this);
+            
 
-            spin_horo = (Spinner) findViewById(R.id.spin_horo);
-            List<String> horo = common.getListFromArray(MyApplication.getSpinData().getJSONArray("horoscope"), "Horoscope");
-            horo_map = common.getMapFromArray(MyApplication.getSpinData().getJSONArray("horoscope"), "Horoscope");
-            ArrayAdapter adp_horo = new ArrayAdapter<String>(this, R.layout.spinner_item, horo);
-            spin_horo.setAdapter(adp_horo);
-            spin_horo.setOnItemSelectedListener(this);
+           
 
-            spin_star = (Spinner) findViewById(R.id.spin_star);
-            List<String> star = common.getListFromArray(MyApplication.getSpinData().getJSONArray("star_list"), "Star");
-            star_map = common.getMapFromArray(MyApplication.getSpinData().getJSONArray("star_list"), "Star");
-            ArrayAdapter adp_star = new ArrayAdapter<String>(this, R.layout.spinner_item, star);
-            spin_star.setAdapter(adp_star);
-            spin_star.setOnItemSelectedListener(this);
-
-            spin_manglik = (Spinner) findViewById(R.id.spin_manglik);
-            List<String> man = common.getListFromArray(MyApplication.getSpinData().getJSONArray("manglik"), "Manglik");
-            manglik_map = common.getMapFromArray(MyApplication.getSpinData().getJSONArray("manglik"), "Manglik");
-            ArrayAdapter adp_man = new ArrayAdapter<String>(this, R.layout.spinner_item, man);
-            spin_manglik.setAdapter(adp_man);
-            spin_manglik.setOnItemSelectedListener(this);
+            
 
             spin_height = (Spinner) findViewById(R.id.spin_height);
             List<String> hit = common.getListFromArray(MyApplication.getSpinData().getJSONArray("height_list"), "Height*");
@@ -522,19 +506,9 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
             //spin_edu.setAdapter(adp_edu);
             //spin_edu.setOnItemSelectedListener(this);
 
-            spin_emp_in = (Spinner) findViewById(R.id.spin_emp_in);
-            List<String> emp = common.getListFromArray(MyApplication.getSpinData().getJSONArray("employee_in"), "Employee In*");
-            emp_map = common.getMapFromArray(MyApplication.getSpinData().getJSONArray("employee_in"), "Employee In*");
-            ArrayAdapter adp_emp = new ArrayAdapter<String>(this, R.layout.spinner_item, emp);
-            spin_emp_in.setAdapter(adp_emp);
-            spin_emp_in.setOnItemSelectedListener(this);
+            
 
-            spin_income = (Spinner) findViewById(R.id.spin_income);
-            List<String> incm = common.getListFromArray(MyApplication.getSpinData().getJSONArray("income"), "Annual Income*");
-            income_map = common.getMapFromArray(MyApplication.getSpinData().getJSONArray("income"), "Annual Income*");
-            ArrayAdapter adp_incm = new ArrayAdapter<String>(this, R.layout.spinner_item, incm);
-            spin_income.setAdapter(adp_incm);
-            spin_income.setOnItemSelectedListener(this);
+          
 
             spin_occupation = (Spinner) findViewById(R.id.spin_occupation);
             List<String> ocu = common.getListFromArray(MyApplication.getSpinData().getJSONArray("occupation_list"), "Occupation*");
@@ -599,17 +573,17 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
             spin_child_status.setOnItemSelectedListener(this);
 
             spin_religion = (Spinner) findViewById(R.id.spin_religion);
-            List<String> reli = common.getListFromArray(MyApplication.getSpinData().getJSONArray("religion_list"), "Religion*");
-            reli_map = common.getMapFromArray(MyApplication.getSpinData().getJSONArray("religion_list"), "Religion*");
+            List<String> reli = common.getListFromArray(MyApplication.getSpinData().getJSONArray("religion_list"), "Community*");
+            reli_map = common.getMapFromArray(MyApplication.getSpinData().getJSONArray("religion_list"), "Community*");
             ArrayAdapter adp_reli = new ArrayAdapter<String>(this, R.layout.spinner_item, reli);
             spin_religion.setAdapter(adp_reli);
             spin_religion.setOnItemSelectedListener(this);
 
             spin_caste = (Spinner) findViewById(R.id.spin_caste);
             List<String> caste = new ArrayList<>();
-            caste.add("Caste*");
+            caste.add("Diocese*");
             caste_map = new HashMap<>();
-            caste_map.put("Caste*", "0");
+            caste_map.put("Diocese*", "0");
             ArrayAdapter adp_caste = new ArrayAdapter<String>(this, R.layout.spinner_item, caste);
             spin_caste.setAdapter(adp_caste);
             spin_caste.setOnItemSelectedListener(this);
@@ -663,7 +637,7 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
                 }
             });
             et_sub_caste = (EditText) findViewById(R.id.et_sub_caste);
-            et_gothra = (EditText) findViewById(R.id.et_gothra);
+           
             et_hoby = (EditText) findViewById(R.id.et_hoby);
             et_about = (EditText) findViewById(R.id.et_about);
 
@@ -673,7 +647,7 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
             common.setDrawableLeftEditText(R.drawable.mobile_pink, et_mobile);
             common.setDrawableLeftEditText(R.drawable.dob_pink, et_dob);
             common.setDrawableLeftEditText(R.drawable.state_pink, et_sub_caste);
-            common.setDrawableLeftEditText(R.drawable.gotra_pink, et_gothra);
+           
             common.setDrawableLeftEditText(R.drawable.hoby_pink, et_hoby);
             //common.setDrawableLeftEditText(R.drawable.about_pink,et_about);
 
@@ -877,7 +851,7 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
     private void validFive() {
         boolean isvalid = true;
         String sub_caste = et_sub_caste.getText().toString().trim();
-        String gothra = et_gothra.getText().toString().trim();
+        
         String hobby = et_hoby.getText().toString().trim();
         String about = et_about.getText().toString().trim();
 
@@ -916,11 +890,11 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
         if (isvalid) {
             HashMap<String, String> param = new HashMap<>();
             param.put("subcaste", sub_caste);
-            param.put("manglik", ischeckData(manglik_id));
-            param.put("star", ischeckData(star_id));
-            param.put("horoscope", ischeckData(horo_id));
-            param.put("gothra", ischeckData(gothra));
-            param.put("moonsign", ischeckData(moon_id));
+            
+           
+            
+            
+           
             param.put("profile_text", about);
             param.put("hobby", hobby);
             param.put("id", ragister_id);
@@ -974,34 +948,23 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
 
     private void validThird() {
         boolean isvalid = true;
-        if (edu_id == null || edu_id.equals("0") || edu_id.equals("")) {
-            common.spinnerSetError(spin_edu, "Please select education");
-            isvalid = false;
-        }
-        if (emp_id == null || emp_id.equals("0") || emp_id.equals("")) {
-            common.spinnerSetError(spin_emp_in, "Please select employment");
-            isvalid = false;
-        }
-        if (income_id == null || income_id.equals("0") || income_id.equals("")) {
-            common.spinnerSetError(spin_income, "Please select annual income");
-            isvalid = false;
-        }
-        if (occu_id == null || occu_id.equals("0") || occu_id.equals("")) {
-            common.spinnerSetError(spin_occupation, "Please select occupation");
-            isvalid = false;
-        }
-        if (desig_id == null || desig_id.equals("0") || desig_id.equals("")) {
-            common.spinnerSetError(spin_designation, "Please select designation");
-            isvalid = false;
-        }
+        String other_education=et_other_education.getText().toString().trim();
+        String other_occupation=et_other_occupation.getText().toString().trim();
+        String other_designation=et_other_designation.getText().toString().trim();
+        
+    
+       
+       
+        
 
         if (isvalid) {
             HashMap<String, String> param = new HashMap<>();
-            param.put("education_detail", edu_id);
-            param.put("employee_in", emp_id);
-            param.put("income", income_id);
+            param.put("education_detail", edu_id);            
+            param.put("other_education", other_education); 
             param.put("occupation", occu_id);
+            param.put("other_occupation", other_occupation);
             param.put("designation", desig_id);
+            param.put("other_designation", other_designation);
             param.put("id", ragister_id);
             submitRagister(Utils.register_step, STEP_3, param);
         }
@@ -1010,6 +973,8 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
 
     private void validSecond() {
         boolean isvalid = true;
+        String other_city=et_other_city.getText().toString().trim();
+        
         if (country_id == null || country_id.equals("0")) {
             common.spinnerSetError(spin_country, "Please select country");
             isvalid = false;
@@ -1019,8 +984,8 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
             isvalid = false;
         }
         if (city_id == null || city_id.equals("0")) {
-            common.spinnerSetError(spin_city, "Please select city");
-            isvalid = false;
+            //common.spinnerSetError(spin_city, "Please select city");
+            //isvalid = false;
         }
         if (mari_id == null || mari_id.equals("0")) {
             common.spinnerSetError(spin_mari, "Please select marital status");
@@ -1046,6 +1011,7 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
             param.put("country_id", country_id);
             param.put("state_id", state_id);
             param.put("city", city_id);
+            param.put("other_city", other_city);
             param.put("marital_status", mari_id);
             param.put("total_children", checkValue(total_child_id));
             param.put("status_children", checkValue(status_child_id));
@@ -1062,6 +1028,8 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
         String dob = et_dob.getText().toString().trim();
         String mobile = et_mobile.getText().toString().trim();
         country_code = spin_code.getSelectedCountryCodeWithPlus();
+        String other_caste = et_other_caste.getText().toString().trim();
+        
 
         boolean isvalid = true;
         if (TextUtils.isEmpty(fname)) {
@@ -1115,8 +1083,8 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
             isvalid = false;
         }
         if (caste_id == null || caste_id.equals("0")) {
-            common.spinnerSetError(spin_caste, "Please select caste");
-            isvalid = false;
+            //common.spinnerSetError(spin_caste, "Please select caste");
+            //isvalid = false;
         }
         if (tongue_id == null || tongue_id.equals("0")) {
             common.spinnerSetError(spin_tongue, "Please select mother tongue");
@@ -1138,6 +1106,9 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
             param.put("gender", gender);
             param.put("id", ragister_id);
             param.put("fb_id", fb_id);
+            param.put("terms", "1");
+            param.put("other_caste", other_caste);
+            
             param.put("android_device_id", session.getLoginData(SessionManager.KEY_DEVICE_TOKEN));
             //Log.d("resp",param.toString());
             submitRagister(Utils.register_first, STEP_1, param);
@@ -1436,14 +1407,14 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
             case R.id.spin_child_status:
                 status_child_id = status_child_map.get(spin_child_status.getSelectedItem().toString());
                 break;
-            case R.id.spin_emp_in:
-                emp_id = emp_map.get(spin_emp_in.getSelectedItem().toString());
-                break;
-            case R.id.spin_income:
-                income_id = income_map.get(spin_income.getSelectedItem().toString());
-                break;
+           
+            
             case R.id.spin_occupation:
                 occu_id = occu_map.get(spin_occupation.getSelectedItem().toString());
+                resetDesignation();
+                if (occu_id != null && !occu_id.equals("0")) {
+                    getDepedentList("designation_list", occu_id);
+                }
                 break;
             case R.id.spin_designation:
                 desig_id = desig_map.get(spin_designation.getSelectedItem().toString());
@@ -1469,18 +1440,10 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
             case R.id.spin_skin:
                 skin_id = skin_map.get(spin_skin.getSelectedItem().toString());
                 break;
-            case R.id.spin_manglik:
-                manglik_id = manglik_map.get(spin_manglik.getSelectedItem().toString());
-                break;
-            case R.id.spin_star:
-                star_id = star_map.get(spin_star.getSelectedItem().toString());
-                break;
-            case R.id.spin_horo:
-                horo_id = horo_map.get(spin_horo.getSelectedItem().toString());
-                break;
-            case R.id.spin_moon:
-                moon_id = moon_map.get(spin_moon.getSelectedItem().toString());
-                break;
+            
+            
+           
+            
         }
     }
 
@@ -1514,8 +1477,8 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
 
                         switch (tag) {
                             case "caste_list":
-                                List<String> caste = common.getListFromArray(object.getJSONArray("data"), "Caste*");
-                                caste_map = common.getMapFromArray(object.getJSONArray("data"), "Caste*");
+                                List<String> caste = common.getListFromArray(object.getJSONArray("data"), "Diocese*");
+                                caste_map = common.getMapFromArray(object.getJSONArray("data"), "Diocese*");
                                 ArrayAdapter adp_caste = new ArrayAdapter<String>(RegisterFirstActivity.this, R.layout.spinner_item, caste);
                                 spin_caste.setAdapter(adp_caste);
                                 break;
@@ -1531,6 +1494,13 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
                                 ArrayAdapter adp_city = new ArrayAdapter<String>(RegisterFirstActivity.this, R.layout.spinner_item, city);
                                 spin_city.setAdapter(adp_city);
                                 break;
+
+                            case "designation_list":
+                                List<String> designation = common.getListFromArray(object.getJSONArray("data"), "Designation*");
+                                desig_map = common.getMapFromArray(object.getJSONArray("data"), "Designation*");
+                                ArrayAdapter adp_designation = new ArrayAdapter<String>(RegisterFirstActivity.this, R.layout.spinner_item, designation);
+                                spin_designation.setAdapter(adp_designation);
+                                break;    
                         }
 
                     }
@@ -1583,12 +1553,23 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
 
     private void resetCaste() {
         List<String> caste = new ArrayList<>();
-        caste.add("Caste*");
+        caste.add("Diocese*");
         caste_map = new HashMap<>();
-        caste_map.put("Caste*", "0");
+        caste_map.put("Diocese*", "0");
         ArrayAdapter adp_caste = new ArrayAdapter<String>(RegisterFirstActivity.this, R.layout.spinner_item, caste);
         spin_caste.setAdapter(adp_caste);
         spin_caste.setSelection(0);
         caste_id = "";
+    }
+
+    private void resetDesignation() {
+        List<String> designation = new ArrayList<>();
+        designation.add("Designation*");
+        desig_map = new HashMap<>();
+        desig_map.put("Designation*", "0");
+        ArrayAdapter adp_designation = new ArrayAdapter<String>(RegisterFirstActivity.this, R.layout.spinner_item, designation);
+        spin_designation.setAdapter(adp_designation);
+        spin_designation.setSelection(0);
+        desig_id = "";
     }
 }

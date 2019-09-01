@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mega Matrimony</string>
+    <string name="app_name">usnazranimatrimony.com</string>
     <string name="facebook_app_id">306163406693480</string>
     <string name="fb_login_protocol_scheme">fb306163406693480</string>
     <string name="login">Login</string>
@@ -19,7 +19,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
 
-    <string name="lbl_welcome_slide_1">Welcome to\nMegaMatrimony</string>
+    <string name="lbl_welcome_slide_1">Welcome to\nusnazranimatrimony.com</string>
     <string name="lbl_welcome_slide_2">Marriages are made in\nheaven but celebrated on \nearth</string>
     <string name="lbl_welcome_slide_3">We provide the best
         \nmatch making service</string>
@@ -30,6 +30,6 @@
     <string name="err_msg_something_went_wrong">Something went wrong. Please logout and signin again.</string>
     <string name="lbl_not_available">N/A</string>
     <string name="btn_update">Update</string>
-    <string name="lbl_all_rights_reserved">Mega Matrimony © 2015-2019 All Rights Reserved</string>
+    <string name="lbl_all_rights_reserved">© Copyright 2018-2019 By usnazranimatrimony.com. All Rights Reserved.</string>
 
 </resources>

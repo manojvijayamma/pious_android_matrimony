@@ -102,7 +102,7 @@ public class Utils {
     public static final String TYPE_SEARCH_ID = "Id Search";
     public static final String TYPE_SEARCH_KEYWORD = "Keyword Search";
 
-    public static final String DIRECTORY_NAME = "Mega Matrimony";
+    public static final String DIRECTORY_NAME = "usnazranimatrimony.com";
 
     public static final String BIRTH_DATE_FORMAT = "dd-MM-yyyy";
     public static final String BIRTH_DATE_UPLOAD_FORMAT = "yyyy-M-dd";

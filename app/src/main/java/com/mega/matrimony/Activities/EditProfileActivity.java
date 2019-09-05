@@ -143,7 +143,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                         break;
                     case KEY_RELIGION:
                         lay_reli.setVisibility(View.VISIBLE);
-                        toolbar.setTitle("Religion Information");
+                        toolbar.setTitle("Cummunity Information");
                         break;
                     case KEY_PROFILE:
                         lay_about.setVisibility(View.VISIBLE);
@@ -483,8 +483,8 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                     common.setDrawableLeftEditText(R.drawable.gotra_pink, et_gothra);
 
                     spin_religion = (Spinner) findViewById(R.id.spin_religion);
-                    reli_list_id = common.getListFromArray_id(MyApplication.getSpinData().getJSONArray("religion_list"), "Religion");
-                    List<String> reli = common.getListFromArray(MyApplication.getSpinData().getJSONArray("religion_list"), "Religion");
+                    reli_list_id = common.getListFromArray_id(MyApplication.getSpinData().getJSONArray("religion_list"), "Community");
+                    List<String> reli = common.getListFromArray(MyApplication.getSpinData().getJSONArray("religion_list"), "Community");
                     reli_map = common.getMapFromArray(MyApplication.getSpinData().getJSONArray("religion_list"),
                             "Religion");
                     ArrayAdapter adp_reli = new ArrayAdapter<String>(this, R.layout.spinner_item, reli);
@@ -495,9 +495,9 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                     caste_list_id = new ArrayList<>();
                     caste_list_id.add("0");
                     List<String> caste = new ArrayList<>();
-                    caste.add("Select Caste");
+                    caste.add("Select Diocese");
                     caste_map = new HashMap<>();
-                    caste_map.put("Select Caste", "0");
+                    caste_map.put("Select Diocese", "0");
                     ArrayAdapter adp_caste = new ArrayAdapter<String>(this, R.layout.spinner_item, caste);
                     spin_caste.setAdapter(adp_caste);
                     spin_caste.setOnItemSelectedListener(this);
@@ -986,11 +986,11 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
         boolean isValid = true;
 
         if (religion_id == null || religion_id.equals("") || religion_id.equals("0")) {
-            common.spinnerSetError(spin_religion, "Please select religion");
+            common.spinnerSetError(spin_religion, "Please select community");
             isValid = false;
         }
         if (caste_id == null || caste_id.equals("") || caste_id.equals("0")) {
-            common.spinnerSetError(spin_caste, "Please select caste");
+            common.spinnerSetError(spin_caste, "Please select diocese");
             isValid = false;
         }
         Log.d("resp", religion_id + "   " + caste_id);
@@ -1539,9 +1539,9 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                     if (object.getString("status").equals("success")) {
 
                         if ("caste_list".equals(tag)) {
-                            caste_list_id = common.getListFromArray_id(object.getJSONArray("data"), "Caste");
-                            List<String> caste = common.getListFromArray(object.getJSONArray("data"), "Caste");
-                            caste_map = common.getMapFromArray(object.getJSONArray("data"), "Caste");
+                            caste_list_id = common.getListFromArray_id(object.getJSONArray("data"), "Diocese");
+                            List<String> caste = common.getListFromArray(object.getJSONArray("data"), "Diocese");
+                            caste_map = common.getMapFromArray(object.getJSONArray("data"), "Diocese");
                             ArrayAdapter adp_caste = new ArrayAdapter<String>(EditProfileActivity.this,
                                     R.layout.spinner_item, caste);
                             spin_caste.setAdapter(adp_caste);

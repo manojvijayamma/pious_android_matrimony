@@ -90,7 +90,7 @@ public class EditPreferenceActivity extends AppCompatActivity implements View.On
                         lay_basic.setVisibility(View.VISIBLE);
                         break;
                     case "religion":
-                        toolbar.setTitle("Religion Preferences");
+                        toolbar.setTitle("Community Preferences");
                         lay_reli.setVisibility(View.VISIBLE);
                         break;
                     case "education":
@@ -293,10 +293,10 @@ public class EditPreferenceActivity extends AppCompatActivity implements View.On
                     spin_religion = (MultiSelectionSpinner) findViewById(R.id.spin_religion);
                     spin_caste = (MultiSelectionSpinner) findViewById(R.id.spin_caste);
                     List<String> reli_val = common.getListFromArray(MyApplication.getSpinData()
-                            .getJSONArray("religion_list"), "Religion");
+                            .getJSONArray("religion_list"), "Community");
                     List<String> reli_ids = common.getListFromArrayId(MyApplication.getSpinData()
                             .getJSONArray("religion_list"));
-                    spin_religion.setItems_string_id(reli_val, reli_ids, "Select Religion");
+                    spin_religion.setItems_string_id(reli_val, reli_ids, "Select Community");
                     spin_religion.setListener(new MultiSelectionSpinner.OnMultipleItemsSelectedListener() {
                         @Override
                         public void selectedIndices(List<Integer> indices) {
@@ -310,10 +310,10 @@ public class EditPreferenceActivity extends AppCompatActivity implements View.On
                                 getDepedentList("caste_list", reli_id);
                             else {
                                 List<String> caste_val = new ArrayList<>();
-                                caste_val.add("Select Caste");
+                                caste_val.add("Select Diocese");
                                 List<String> caste_ids = new ArrayList<>();
                                 caste_ids.add("0");
-                                spin_caste.setItems_string_id(caste_val, caste_ids, "Select Caste");
+                                spin_caste.setItems_string_id(caste_val, caste_ids, "Select Diocese");
                                 spin_caste.setSelection(0);
                             }
                         }
@@ -321,10 +321,10 @@ public class EditPreferenceActivity extends AppCompatActivity implements View.On
                     spin_religion.setSelection(0);
 
                     List<String> caste_val = new ArrayList<>();
-                    caste_val.add("Select Caste");
+                    caste_val.add("Select Diocese");
                     List<String> caste_ids = new ArrayList<>();
                     caste_ids.add("0");
-                    spin_caste.setItems_string_id(caste_val, caste_ids, "Select Caste");
+                    spin_caste.setItems_string_id(caste_val, caste_ids, "Select Diocese");
                     spin_caste.setSelection(0);
                     spin_caste.setListener(new MultiSelectionSpinner.OnMultipleItemsSelectedListener() {
                         @Override
@@ -597,9 +597,9 @@ public class EditPreferenceActivity extends AppCompatActivity implements View.On
                     if (object.getString("status").equals("success")) {
 
                         if ("caste_list".equals(tag)) {
-                            List<String> caste_val = common.getListFromArray(object.getJSONArray("data"), "Caste");
+                            List<String> caste_val = common.getListFromArray(object.getJSONArray("data"), "Diocese");
                             List<String> caste_ids = common.getListFromArrayId(object.getJSONArray("data"));
-                            spin_caste.setItems_string_id(caste_val, caste_ids, "Select Caste");
+                            spin_caste.setItems_string_id(caste_val, caste_ids, "Select Diocese");
                             spin_caste.setListener(new MultiSelectionSpinner.OnMultipleItemsSelectedListener() {
                                 @Override
                                 public void selectedIndices(List<Integer> indices) {
@@ -856,7 +856,7 @@ public class EditPreferenceActivity extends AppCompatActivity implements View.On
 
     private void validReliData() {
         if (reli_id.equals("") || reli_id.equals("0")) {
-            common.spinnerSetError(spin_religion, "Please select religion");
+            common.spinnerSetError(spin_religion, "Please select Community");
             return;
         }
         HashMap<String, String> param = new HashMap<>();

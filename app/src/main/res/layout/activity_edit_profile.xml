@@ -730,6 +730,16 @@
                             android:paddingLeft="37dp" />
                     </RelativeLayout>
 
+                     <EditText
+                    android:id="@+id/et_other_caste"
+                    style="@style/editText_ragister"
+                    android:layout_width="match_parent"
+                    android:hint="If other diocese"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingEnd="35dp"
+                    android:paddingRight="35dp" />
+
                     <EditText
                         android:id="@+id/et_sub_caste"
                         style="@style/editText_ragister"
@@ -995,6 +1005,16 @@
                             android:paddingLeft="37dp" />
                     </RelativeLayout>
 
+                    <EditText
+                    android:id="@+id/et_other_city"
+                    style="@style/editText_ragister"
+                    android:layout_width="match_parent"
+                    android:hint="If other city"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingEnd="35dp"
+                    android:paddingRight="35dp" />
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1156,6 +1176,16 @@
                             android:paddingLeft="37dp" />
                     </RelativeLayout>
 
+                     <EditText
+                            android:id="@+id/et_other_education"
+                            style="@style/editText_ragister"
+                            android:layout_width="match_parent"
+                            android:hint="If other education"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingEnd="35dp"
+                            android:paddingRight="35dp" />
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
@@ -1254,6 +1284,16 @@
                             android:paddingLeft="37dp" />
                     </RelativeLayout>
 
+                     <EditText
+                            android:id="@+id/et_other_occupation"
+                            style="@style/editText_ragister"
+                            android:layout_width="match_parent"
+                            android:hint="If other occupation"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingEnd="35dp"
+                            android:paddingRight="35dp" />
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
@@ -1285,6 +1325,16 @@
                             android:paddingStart="37dp"
                             android:paddingLeft="37dp" />
                     </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/et_other_designation"
+                            style="@style/editText_ragister"
+                            android:layout_width="match_parent"
+                            android:hint="If other designation"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingEnd="35dp"
+                            android:paddingRight="35dp" />
 
                     <Button
                         android:id="@+id/btn_edu"

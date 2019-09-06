@@ -54,7 +54,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
     private final String KEY_FAMILY = "family";
 
     private EditText et_f_name, et_l_name, et_dob, et_about, et_hoby, et_birth_place, et_birth_time, et_sub_caste, et_gothra, et_address,
-            et_mobile, et_phone, et_time_call, et_father_name, et_father_ocu, et_mother_name, et_mother_ocu, et_about_family;
+            et_mobile, et_phone, et_time_call, et_father_name, et_father_ocu, et_mother_name, et_mother_ocu, et_about_family, et_other_caste, et_other_city, et_other_education, et_other_occupation, et_other_designation;
     private Spinner spin_religion, spin_mari, spin_t_child, spin_child_status, spin_tongue, spin_height, spin_weight,
             spin_body, spin_eat, spin_smok, spin_drink, spin_skin, spin_blood,
             spin_created, spin_reference, spin_caste, spin_manglik, spin_star, spin_horo, spin_moon,
@@ -76,7 +76,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
             family_type_map, family_status_map, no_bro_map, no_mari_bro_map, no_sis_map, no_mari_sis_map;
     private String religion_id = "", caste_id = "", tongue_id = "",
             country_id = "", state_id = "", city_id = "", mari_id = "", total_child_id = "", status_child_id,
-            edu_id = "", emp_id = "", income_id = "", occu_id = "", desig_id = "", hite_id = "", weight_id = "", eat_id = "", smok_id = "", drink_id = "",
+            edu_id = "", emp_id = "", income_id = "", occu_id = "", desig_id = "", hite_id = "-1", weight_id = "", eat_id = "", smok_id = "", drink_id = "",
             body_id = "", skin_id = "", manglik_id = "", star_id = "", horo_id = "", moon_id = "", lang_id = "", blood_id = "", created_id = "",
             reference_id = "", resi_id = "", code_id = "", family_type_id = "", family_status_id = "", no_bro_id = "", no_mari_bro_id = "",
             no_sis_id = "", no_mari_sis_id = "";
@@ -86,7 +86,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
             body_list_id, eat_list_id, smok_list_id, drink_list_id, skin_list_id, blood_list_id, created_list_id, reference_list_id,
             reli_list_id, caste_list_id, man_list_id, star_list_id, horo_list_id, moon_list_id, contry_list_id, state_list_id,
             city_list_id, residence_list_id, emp_list_id, incm_list_id, ocu_list_id, desi_list_id, family_type_list_id,
-            family_status_list_id, no_bro_list_id, no_mari_bro_list_id, no_sis_list_id, no_mari_sis_list_id;
+            family_status_list_id, no_bro_list_id, no_mari_bro_list_id, no_sis_list_id, no_mari_sis_list_id, designation_list_id;
     private SimpleDateFormat mFormat = null;
     private boolean isLoaded = false;
 
@@ -113,6 +113,15 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
         lay_loca = (LinearLayout) findViewById(R.id.lay_loca);
         lay_edu = (LinearLayout) findViewById(R.id.lay_edu);
         lay_family = (LinearLayout) findViewById(R.id.lay_family);
+
+
+        et_other_caste = (EditText) findViewById(R.id.et_other_caste);
+        et_other_city = (EditText) findViewById(R.id.et_other_city);
+        et_other_education = (EditText) findViewById(R.id.et_other_education);
+        et_other_occupation = (EditText) findViewById(R.id.et_other_occupation);
+        et_other_designation = (EditText) findViewById(R.id.et_other_designation);
+
+
 
         lay_child_status = (RelativeLayout) findViewById(R.id.lay_child_status);
         lay_t_child = (RelativeLayout) findViewById(R.id.lay_t_child);
@@ -387,6 +396,9 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                     common.setDrawableLeftEditText(R.drawable.user_pink, et_f_name);
                     common.setDrawableLeftEditText(R.drawable.user_pink, et_l_name);
                     common.setDrawableLeftEditText(R.drawable.dob_pink, et_dob);
+
+
+                    
 
                     spin_mari = (Spinner) findViewById(R.id.spin_mari);
                     mari_list_id = common.getListFromArray_id(MyApplication.getSpinData().getJSONArray("marital_status"), "Marital Status");
@@ -889,36 +901,36 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
             et_l_name.setError("Please enter last name");
             isValid = false;
         }
-        if (mari_id == null || mari_id.equals("0")) {
-            common.spinnerSetError(spin_mari, "Please select marital status");
-            isValid = false;
-        }
-        if (mari_id != null && !mari_id.equals("Unmarried")) {
-            if (total_child_id.equals("total")) {
-                common.spinnerSetError(spin_t_child, "Please select total children");
-                isValid = false;
-            } else {
-                if (!total_child_id.equals("0")) {
-                    if (status_child_id.equals("0")) {
-                        common.spinnerSetError(spin_child_status, "Please select children status");
-                        isValid = false;
-                    }
-                }
-            }
-        }
+        // if (mari_id == null || mari_id.equals("0")) {
+        //     common.spinnerSetError(spin_mari, "Please select marital status");
+        //     isValid = false;
+        // }
+        // if (mari_id != null && !mari_id.equals("Unmarried")) {
+        //     if (total_child_id.equals("total")) {
+        //         common.spinnerSetError(spin_t_child, "Please select total children");
+        //         isValid = false;
+        //     } else {
+        //         if (!total_child_id.equals("0")) {
+        //             if (status_child_id.equals("0")) {
+        //                 common.spinnerSetError(spin_child_status, "Please select children status");
+        //                 isValid = false;
+        //             }
+        //         }
+        //     }
+        // }
 
-        if (tongue_id == null || tongue_id.equals("") || tongue_id.equals("0")) {
-            common.spinnerSetError(spin_tongue, "Please select mother tongue");
-            isValid = false;
-        }
-        if (hite_id == null || hite_id.equals("") || hite_id.equals("0")) {
-            common.spinnerSetError(spin_height, "Please select height");
-            isValid = false;
-        }
-        if (weight_id == null || weight_id.equals("") || weight_id.equals("0")) {
-            common.spinnerSetError(spin_weight, "Please select weight");
-            isValid = false;
-        }
+        // if (tongue_id == null || tongue_id.equals("") || tongue_id.equals("0")) {
+        //     common.spinnerSetError(spin_tongue, "Please select mother tongue");
+        //     isValid = false;
+        // }
+        // if (hite_id == null || hite_id.equals("") || hite_id.equals("0")) {
+        //     common.spinnerSetError(spin_height, "Please select height");
+        //     isValid = false;
+        // }
+        // if (weight_id == null || weight_id.equals("") || weight_id.equals("0")) {
+        //     common.spinnerSetError(spin_weight, "Please select weight");
+        //     isValid = false;
+        // }
         if (isValid) {
             HashMap<String, String> param = new HashMap<>();
             param.put("firstname", fname);
@@ -958,14 +970,14 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
         String location = et_birth_place.getText().toString().trim();
         String time = et_birth_time.getText().toString().trim();
 
-        if (created_id == null || created_id.equals("") || created_id.equals("0")) {
-            common.spinnerSetError(spin_created, "Please select created by");
-            isValid = false;
-        }
-        if (reference_id == null || reference_id.equals("") || reference_id.equals("0")) {
-            common.spinnerSetError(spin_reference, "Please select reference by");
-            isValid = false;
-        }
+        // if (created_id == null || created_id.equals("") || created_id.equals("0")) {
+        //     common.spinnerSetError(spin_created, "Please select created by");
+        //     isValid = false;
+        // }
+        // if (reference_id == null || reference_id.equals("") || reference_id.equals("0")) {
+        //     common.spinnerSetError(spin_reference, "Please select reference by");
+        //     isValid = false;
+        // }
 
         if (isValid) {
             HashMap<String, String> param = new HashMap<>();
@@ -984,15 +996,16 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
         String subcst = et_sub_caste.getText().toString().trim();
         String gothra = et_gothra.getText().toString().trim();
         boolean isValid = true;
+        String other_caste = et_other_caste.getText().toString().trim();
 
-        if (religion_id == null || religion_id.equals("") || religion_id.equals("0")) {
-            common.spinnerSetError(spin_religion, "Please select community");
-            isValid = false;
-        }
-        if (caste_id == null || caste_id.equals("") || caste_id.equals("0")) {
-            common.spinnerSetError(spin_caste, "Please select diocese");
-            isValid = false;
-        }
+        // if (religion_id == null || religion_id.equals("") || religion_id.equals("0")) {
+        //     common.spinnerSetError(spin_religion, "Please select community");
+        //     isValid = false;
+        // }
+        // if (caste_id == null || caste_id.equals("") || caste_id.equals("0")) {
+        //     common.spinnerSetError(spin_caste, "Please select diocese");
+        //     isValid = false;
+        // }
         Log.d("resp", religion_id + "   " + caste_id);
         if (isValid) {
             HashMap<String, String> param = new HashMap<>();
@@ -1004,6 +1017,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
             param.put("horoscope", checkData(horo_id));
             param.put("gothra", gothra);
             param.put("moonsign", checkData(moon_id));
+            param.put("other_caste", other_caste);
             param.put("member_id", session.getLoginData(SessionManager.KEY_USER_ID));
             submitData(param);
         }
@@ -1015,21 +1029,22 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
         String phone = et_phone.getText().toString().trim();
         String time_call = et_time_call.getText().toString().trim();
         code_id = spin_code.getSelectedCountryCodeWithPlus();
+        String other_city=et_other_city.getText().toString().trim();
 
         boolean isValid = true;
 
-        if (country_id == null || country_id.equals("") || country_id.equals("0")) {
-            common.spinnerSetError(spin_country, "Please select country");
-            isValid = false;
-        }
-        if (state_id == null ||  state_id.equals("") || state_id.equals("0")) {
-            common.spinnerSetError(spin_state, "Please select state");
-            isValid = false;
-        }
-        if (city_id == null ||  city_id.equals("") || city_id.equals("0")) {
-            common.spinnerSetError(spin_city, "Please select city");
-            isValid = false;
-        }
+        // if (country_id == null || country_id.equals("") || country_id.equals("0")) {
+        //     common.spinnerSetError(spin_country, "Please select country");
+        //     isValid = false;
+        // }
+        // if (state_id == null ||  state_id.equals("") || state_id.equals("0")) {
+        //     common.spinnerSetError(spin_state, "Please select state");
+        //     isValid = false;
+        // }
+        // if (city_id == null ||  city_id.equals("") || city_id.equals("0")) {
+        //     common.spinnerSetError(spin_city, "Please select city");
+        //     isValid = false;
+        // }
         if (TextUtils.isEmpty(mobile) || mobile.length() < 8) {
             et_mobile.setError("Please enter valid mobile number");
             isValid = false;
@@ -1048,6 +1063,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
             param.put("country_id", checkData(country_id));
             param.put("state_id", checkData(state_id));
             param.put("city", checkData(city_id));
+            param.put("other_city", other_city);
             param.put("address", add);
             param.put("country_code", code_id);
             param.put("mobile_num", mobile);
@@ -1061,22 +1077,30 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
 
     private void validEduData() {
         boolean isValid = true;
-        if (edu_id == null ||  edu_id.equals("") || edu_id.equals("0")) {
-            common.spinnerSetError(spin_edu, "Please select education");
-            isValid = false;
-        }
-        if (occu_id == null || occu_id.equals("") || occu_id.equals("0")) {
-            common.spinnerSetError(spin_occupation, "Please select occupation");
-            isValid = false;
-        }
+
+        String other_education=et_other_education.getText().toString().trim();
+        String other_occupation=et_other_occupation.getText().toString().trim();
+        String other_designation=et_other_designation.getText().toString().trim();
+
+        // if (edu_id == null ||  edu_id.equals("") || edu_id.equals("0")) {
+        //     common.spinnerSetError(spin_edu, "Please select education");
+        //     isValid = false;
+        // }
+        // if (occu_id == null || occu_id.equals("") || occu_id.equals("0")) {
+        //     common.spinnerSetError(spin_occupation, "Please select occupation");
+        //     isValid = false;
+        // }
 
         if (isValid) {
             HashMap<String, String> param = new HashMap<>();
             param.put("education_detail", checkData(edu_id));
+            param.put("other_education", other_education); 
             param.put("employee_in", checkData(emp_id));
             param.put("income", checkData(income_id));
             param.put("occupation", checkData(occu_id));
+            param.put("other_occupation", other_occupation);
             param.put("designation", checkData(desig_id));
+            param.put("other_designation", other_designation);
             param.put("member_id", session.getLoginData(SessionManager.KEY_USER_ID));
             submitData(param);
         }
@@ -1496,6 +1520,10 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                 break;
             case R.id.spin_occupation:
                 occu_id = occu_map.get(spin_occupation.getSelectedItem().toString());
+                resetDesignation();
+                if (occu_id != null && !occu_id.equals("0")) {
+                    getDepedentList("designation_list", occu_id);
+                }
                 break;
             case R.id.spin_designation:
                 desig_id = desig_map.get(spin_designation.getSelectedItem().toString());
@@ -1589,6 +1617,24 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                             //common.setSelection(spin_city, city_list_id, city_id);
 
                         }
+                        else if ("designation_list".equals(tag)) {
+                                designation_list_id = common.getListFromArray_id(object.getJSONArray("data"), "Designation");
+                                List<String> designation = common.getListFromArray(object.getJSONArray("data"), "Designation");
+                                desig_map = common.getMapFromArray(object.getJSONArray("data"), "Designation");
+                                
+                                if (desig_map != null && desig_map.size() > 0) {
+                                    ArrayAdapter adp_designation = new ArrayAdapter<String>(EditProfileActivity.this, R.layout.spinner_item, designation);
+                                    spin_designation.setAdapter(adp_designation);
+
+                                    if (desig_id != null && !desig_id.equals("")) {
+                                        for (int i = 0; i < designation_list_id.size(); i++) {
+                                            if (designation_list_id.get(i).equals(desig_id))
+                                            spin_designation.setSelection(i);
+                                        }
+                                    }
+                                }    
+                                 
+                        }
 
                     }
 
@@ -1642,6 +1688,17 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                 validFamilyData();
                 break;
         }
+    }
+
+    private void resetDesignation() {
+        List<String> designation = new ArrayList<>();
+        designation.add("Designation");
+        desig_map = new HashMap<>();
+        desig_map.put("Designation", "0");
+        ArrayAdapter adp_designation = new ArrayAdapter<String>(EditProfileActivity.this, R.layout.spinner_item, designation);
+        spin_designation.setAdapter(adp_designation);
+        spin_designation.setSelection(0);
+        desig_id = "";
     }
 
 }

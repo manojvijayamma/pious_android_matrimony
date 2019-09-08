@@ -231,9 +231,9 @@ public class QuickSearchFragment extends Fragment {
             spin_caste = (MultiSelectionSpinner) view.findViewById(R.id.spin_caste);
 
             spin_religion = (MultiSelectionSpinner) view.findViewById(R.id.spin_religion);
-            List<String> reli_val = common.getListFromArray(MyApplication.getSpinData().getJSONArray("religion_list"), "Religion");
+            List<String> reli_val = common.getListFromArray(MyApplication.getSpinData().getJSONArray("religion_list"), "Community");
             List<String> reli_ids = common.getListFromArrayId(MyApplication.getSpinData().getJSONArray("religion_list"));
-            spin_religion.setItems_string_id(reli_val, reli_ids, "Select Religion");
+            spin_religion.setItems_string_id(reli_val, reli_ids, "Select Community");
             spin_religion.setListener(new MultiSelectionSpinner.OnMultipleItemsSelectedListener() {
                 @Override
                 public void selectedIndices(List<Integer> indices) {
@@ -247,10 +247,10 @@ public class QuickSearchFragment extends Fragment {
                         getDepedentList("caste_list", religion_id);
                     else {
                         List<String> caste_val = new ArrayList<>();
-                        caste_val.add("Select Caste");
+                        caste_val.add("Select Diocese");
                         List<String> caste_ids = new ArrayList<>();
                         caste_ids.add("0");
-                        spin_caste.setItems_string_id(caste_val, caste_ids, "Select Caste");
+                        spin_caste.setItems_string_id(caste_val, caste_ids, "Select Diocese");
                         spin_caste.setSelection(0);
                     }
                     //Log.d("ressel",religion_id);
@@ -258,10 +258,10 @@ public class QuickSearchFragment extends Fragment {
             });
 
             List<String> caste_val = new ArrayList<>();
-            caste_val.add("Select Caste");
+            caste_val.add("Select Diocese");
             List<String> caste_ids = new ArrayList<>();
             caste_ids.add("0");
-            spin_caste.setItems_string_id(caste_val, caste_ids, "Select Caste");
+            spin_caste.setItems_string_id(caste_val, caste_ids, "Select Diocese");
             spin_caste.setSelection(0);
             spin_caste.setListener(new MultiSelectionSpinner.OnMultipleItemsSelectedListener() {
                 @Override
@@ -529,9 +529,9 @@ public class QuickSearchFragment extends Fragment {
 
                         switch (tag) {
                             case "caste_list":
-                                List<String> caste_val = common.getListFromArray(object.getJSONArray("data"), "Caste");
+                                List<String> caste_val = common.getListFromArray(object.getJSONArray("data"), "Diocese");
                                 List<String> caste_ids = common.getListFromArrayId(object.getJSONArray("data"));
-                                spin_caste.setItems_string_id(caste_val, caste_ids, "Select Caste");
+                                spin_caste.setItems_string_id(caste_val, caste_ids, "Select Diocese");
                                 spin_caste.setListener(new MultiSelectionSpinner.OnMultipleItemsSelectedListener() {
                                     @Override
                                     public void selectedIndices(List<Integer> indices) {

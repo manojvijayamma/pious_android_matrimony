@@ -54,7 +54,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
     private final String KEY_FAMILY = "family";
 
     private EditText et_f_name, et_l_name, et_dob, et_about, et_hoby, et_birth_place, et_birth_time, et_sub_caste, et_gothra, et_address,
-            et_mobile, et_phone, et_time_call, et_father_name, et_father_ocu, et_mother_name, et_mother_ocu, et_about_family, et_other_caste, et_other_city, et_other_education, et_other_occupation, et_other_designation;
+            et_mobile, et_phone, et_time_call, et_father_name, et_father_ocu, et_mother_name, et_mother_ocu, et_about_family, et_other_caste, et_other_city, et_other_education, et_other_occupation, et_other_designation, et_family_name, et_zipcode;
     private Spinner spin_religion, spin_mari, spin_t_child, spin_child_status, spin_tongue, spin_height, spin_weight,
             spin_body, spin_eat, spin_smok, spin_drink, spin_skin, spin_blood,
             spin_created, spin_reference, spin_caste, spin_manglik, spin_star, spin_horo, spin_moon,
@@ -79,7 +79,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
             edu_id = "", emp_id = "", income_id = "", occu_id = "", desig_id = "", hite_id = "-1", weight_id = "", eat_id = "", smok_id = "", drink_id = "",
             body_id = "", skin_id = "", manglik_id = "", star_id = "", horo_id = "", moon_id = "", lang_id = "", blood_id = "", created_id = "",
             reference_id = "", resi_id = "", code_id = "", family_type_id = "", family_status_id = "", no_bro_id = "", no_mari_bro_id = "",
-            no_sis_id = "", no_mari_sis_id = "";
+            no_sis_id = "", no_mari_sis_id = "", desig_initial_id;
 
     private ProgressDialog pd;
     private List<String> mari_list_id, tot_list_id, status_list_id, tong_list_id, hit_list_id, wite_list_id,
@@ -120,6 +120,8 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
         et_other_education = (EditText) findViewById(R.id.et_other_education);
         et_other_occupation = (EditText) findViewById(R.id.et_other_occupation);
         et_other_designation = (EditText) findViewById(R.id.et_other_designation);
+        et_zipcode = (EditText) findViewById(R.id.et_zipcode);
+        et_family_name = (EditText) findViewById(R.id.et_family_name);
 
 
 
@@ -200,7 +202,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
 
         common.makePostRequest(Utils.get_my_profile, param, response -> {
             pd.dismiss();
-            // Log.d("resp",response);
+             Log.d(">>>resp",response);
             try {
                 JSONObject object = new JSONObject(response);
                 session.setUserData(SessionManager.TOKEN, object.getString("tocken"));
@@ -260,6 +262,8 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                             common.setSelection(spin_horo, horo_list_id, horo_id);
                             common.setSelection(spin_moon, moon_list_id, moon_id);
 
+                            et_other_caste.setText(data.getString("other_caste"));
+
                             break;
                         case KEY_PROFILE:
                             et_about.setText(data.getString("profile_text"));
@@ -294,6 +298,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                             income_id = data.getString("income");
                             occu_id = data.getString("occupation");
                             desig_id = data.getString("designation");
+                            desig_initial_id=desig_id;
                             spin_edu.setSelection(edu_id.split(","));
 
                             common.setSelection(spin_emp_in, emp_list_id, emp_id);
@@ -301,6 +306,10 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                             common.setSelection(spin_occupation, ocu_list_id, occu_id);
                             common.setSelection(spin_designation, desi_list_id, desig_id);
 
+                            et_other_education.setText(data.getString("other_education"));
+                            et_other_occupation.setText(data.getString("other_occupation"));
+                            et_other_designation.setText(data.getString("other_designation"));
+                            Log.d(">>>desig_id load",desig_id);
                             break;
                         case KEY_LIFE:
                             body_id = data.getString("bodytype");
@@ -346,6 +355,8 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
 
                             et_phone.setText(data.getString("phone"));
                             et_time_call.setText(data.getString("time_to_call"));
+                            et_zipcode.setText(data.getString("zipcode"));
+                            et_other_city.setText(data.getString("other_city"));
 
                             break;
                         case KEY_FAMILY:
@@ -356,7 +367,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                             no_sis_id = data.getString("no_of_sisters");
                             no_mari_sis_id = data.getString("no_of_married_sister");
 
-                            common.setSelection(spin_family_type, family_type_list_id, family_type_id);
+
                             common.setSelection(spin_family_status, family_status_list_id, family_status_id);
                             common.setSelection(spin_no_bro, no_bro_list_id, no_bro_id);
 
@@ -367,6 +378,8 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                             et_mother_name.setText(data.getString("mother_name"));
                             et_mother_ocu.setText(data.getString("mother_occupation"));
                             et_about_family.setText(data.getString("family_details"));
+
+                            et_family_name.setText(data.getString("family_type"));
 
                             break;
                     }
@@ -775,13 +788,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
 
                     break;
                 case KEY_FAMILY:
-                    spin_family_type = (Spinner) findViewById(R.id.spin_family_type);//family_type
-                    family_type_list_id = common.getListFromArray_id(MyApplication.getSpinData().getJSONArray("family_type"), "Family Type");
-                    List<String> family_type = common.getListFromArray(MyApplication.getSpinData().getJSONArray("family_type"), "Family Type");
-                    family_type_map = common.getMapFromArray(MyApplication.getSpinData().getJSONArray("family_type"), "Family Type");
-                    ArrayAdapter adp_family_type = new ArrayAdapter<String>(this, R.layout.spinner_item, family_type);
-                    spin_family_type.setAdapter(adp_family_type);
-                    spin_family_type.setOnItemSelectedListener(this);
+
 
                     spin_family_status = (Spinner) findViewById(R.id.spin_family_status);
                     family_status_list_id = common.getListFromArray_id(MyApplication.getSpinData().getJSONArray("family_status"), "Family Status");
@@ -1030,6 +1037,8 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
         String time_call = et_time_call.getText().toString().trim();
         code_id = spin_code.getSelectedCountryCodeWithPlus();
         String other_city=et_other_city.getText().toString().trim();
+        String zipcode=et_zipcode.getText().toString().trim();
+        
 
         boolean isValid = true;
 
@@ -1064,6 +1073,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
             param.put("state_id", checkData(state_id));
             param.put("city", checkData(city_id));
             param.put("other_city", other_city);
+             param.put("zipcode", zipcode);
             param.put("address", add);
             param.put("country_code", code_id);
             param.put("mobile_num", mobile);
@@ -1113,9 +1123,10 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
         String mother_name = et_mother_name.getText().toString().trim();
         String mother_occupation = et_mother_ocu.getText().toString().trim();
         String family_details = et_about_family.getText().toString().trim();
+        String family_name = et_family_name.getText().toString().trim();
 
         HashMap<String, String> param = new HashMap<>();
-        param.put("family_type", checkData(family_type_id));
+        //param.put("family_type", checkData(family_type_id));
         param.put("family_status", checkData(family_status_id));
         param.put("no_of_brothers", no_bro_id);
         param.put("no_of_married_brother", no_mari_bro_id);
@@ -1123,6 +1134,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
         param.put("no_of_married_sister", no_mari_sis_id);
 
         param.put("father_name", father_name);
+        param.put("family_type", family_name);
         param.put("father_occupation", father_occupation);
         param.put("mother_name", mother_name);
         param.put("mother_occupation", mother_occupation);
@@ -1350,9 +1362,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         Spinner spinner = (Spinner) adapterView;
         switch (spinner.getId()) {
-            case R.id.spin_family_type:
-                family_type_id = family_type_map.get(spin_family_type.getSelectedItem().toString());
-                break;
+
             case R.id.spin_family_status:
                 family_status_id = family_status_map.get(spin_family_status.getSelectedItem().toString());
                 break;
@@ -1559,6 +1569,7 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
             public void onResponse(String response) {
                 // Log.d("resp",tag+"   ");
                 Log.d("matre", "getDepedentList   " + tag + "    " + id);
+
                 isLoaded = true;
                 pd.dismiss();
                 try {
@@ -1625,10 +1636,10 @@ public class EditProfileActivity extends AppCompatActivity implements AdapterVie
                                 if (desig_map != null && desig_map.size() > 0) {
                                     ArrayAdapter adp_designation = new ArrayAdapter<String>(EditProfileActivity.this, R.layout.spinner_item, designation);
                                     spin_designation.setAdapter(adp_designation);
-
-                                    if (desig_id != null && !desig_id.equals("")) {
+                                    Log.d(">>>desig_initial_id", desig_initial_id);
+                                    if (desig_initial_id != null && !desig_initial_id.equals("")) {
                                         for (int i = 0; i < designation_list_id.size(); i++) {
-                                            if (designation_list_id.get(i).equals(desig_id))
+                                            if (designation_list_id.get(i).equals(desig_initial_id))
                                             spin_designation.setSelection(i);
                                         }
                                     }

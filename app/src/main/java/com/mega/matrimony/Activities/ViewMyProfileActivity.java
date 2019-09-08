@@ -43,11 +43,12 @@ import java.util.HashMap;
 import com.mega.matrimony.databinding.ActivityViewMyProfileBinding;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import android.util.Log;
 
 public class ViewMyProfileActivity extends AppCompatActivity implements View.OnClickListener,TabHost.OnTabChangeListener {
 
     TextView tv_basic_label,tv_basic_label_pref,tv_loca_label_pref,tv_edu_label_pref,tv_reli_label_pref,tv_pro_disc_label,tv_edu_label,tv_reli_label,tv_phy_label,tv_family_label,
-            tv_locat_label,tv_pro_per;
+            tv_locat_label,tv_pro_per, tv_other_caste, tv_other_education, tv_other_occupation, tv_other_designation, tv_other_city, tv_family_name, tv_zipcode;
 
     private int deviceWidth = 0;
 
@@ -175,6 +176,14 @@ public class ViewMyProfileActivity extends AppCompatActivity implements View.OnC
 
         host.setOnTabChangedListener(this);
 
+        tv_other_caste=(TextView)findViewById(R.id.tv_other_caste);
+        tv_other_education=(TextView)findViewById(R.id.tv_other_education);
+        tv_other_occupation=(TextView)findViewById(R.id.tv_other_occupation);
+        tv_other_designation=(TextView)findViewById(R.id.tv_other_designation);
+        tv_other_city=(TextView)findViewById(R.id.tv_other_city);
+        tv_zipcode=(TextView)findViewById(R.id.tv_zipcode);
+        tv_family_name=(TextView)findViewById(R.id.tv_family_name);
+
         tv_pro_per=(TextView)findViewById(R.id.tv_pro_per);
         tv_basic_label=(TextView)findViewById(R.id.tv_basic_label);
         tv_basic_label.setOnClickListener(this);
@@ -258,6 +267,9 @@ public class ViewMyProfileActivity extends AppCompatActivity implements View.OnC
             pd.dismiss();
             try {
                 AppDebugLog.print("resp : "+response);
+
+                Log.d(">>>get_my_profile",response);
+
                 JSONObject object=new JSONObject(response);
                 session.setUserData(SessionManager.TOKEN,object.getString("tocken"));
                 if (object.getString("status").equals("success")) {
@@ -286,6 +298,15 @@ public class ViewMyProfileActivity extends AppCompatActivity implements View.OnC
 
                     JSONArray fileds=data.getJSONArray("fileds");
                     photo_arr=fileds.getJSONObject(7).getJSONArray("value");
+
+                    tv_other_caste.setText(data.getString("other_caste"));
+                    tv_other_education.setText(data.getString("other_education"));
+                    tv_other_occupation.setText(data.getString("other_occupation"));
+                    tv_other_designation.setText(data.getString("other_designation"));
+                    tv_other_city.setText(data.getString("other_city"));
+                    tv_zipcode.setText(data.getString("zipcode"));
+
+                    tv_family_name.setText(data.getString("family_type"));
 
                     user=new MyData();
                     user.setName(checkField(data.getString("username")));

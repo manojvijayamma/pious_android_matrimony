@@ -515,14 +515,14 @@
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:padding="5dp"
-                                                        android:text="Subcaste" />
+                                                        android:text="If Other Caste" />
 
                                                     <TextView
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:padding="5dp"
 
-                                                        android:text="@{user.subcaste}"
+                                                        android:id="@+id/tv_other_caste"
                                                         android:textColor="@color/black"
                                                         android:textSize="15sp"
                                                         android:textStyle="bold" />
@@ -834,7 +834,8 @@
                                                     android:layout_marginLeft="5dp"
                                                     android:layout_weight="1"
                                                     android:orientation="vertical"
-                                                    android:padding="5dp">
+                                                    android:padding="5dp"
+                                                    android:visibility="invisible">
 
                                                     <TextView
 
@@ -986,6 +987,35 @@
                                                         android:textStyle="bold" />
                                                 </LinearLayout>
 
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical"
+                                                    android:padding="5dp">
+
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:padding="5dp"
+                                                        android:text="If Other Education" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:padding="5dp"
+                                                        android:id="@+id/tv_other_education"
+                                                        android:textColor="@color/black"
+                                                        android:textSize="15sp"
+                                                        android:textStyle="bold" />
+                                                </LinearLayout>
+
+
+
+
                                                 <RelativeLayout
                                                     android:layout_width="1dp"
                                                     android:layout_height="match_parent"
@@ -1083,6 +1113,36 @@
                                                         android:textStyle="bold" />
                                                 </LinearLayout>
 
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical"
+                                                    android:padding="5dp">
+
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:padding="5dp"
+                                                        android:text="If Other Occupation" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:padding="5dp"
+
+                                                        android:id="@+id/tv_other_occupation"
+                                                        android:textColor="@color/black"
+                                                        android:textSize="15sp"
+                                                        android:textStyle="bold" />
+                                                </LinearLayout>
+
+
+
                                             </LinearLayout>
 
                                             <LinearLayout
@@ -1114,6 +1174,34 @@
                                                         android:textSize="15sp"
                                                         android:textStyle="bold" />
                                                 </LinearLayout>
+
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical"
+                                                    android:padding="5dp">
+
+                                                    <TextView
+
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:padding="5dp"
+                                                        android:text="If Other Designation" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:padding="5dp"
+                                                        android:id="@+id/tv_other_designation"
+                                                        android:textColor="@color/black"
+                                                        android:textSize="15sp"
+                                                        android:textStyle="bold" />
+                                                </LinearLayout>
+
+
 
                                                 <RelativeLayout
                                                     android:layout_width="1dp"
@@ -1510,59 +1598,73 @@
                                                         android:textSize="15sp"
                                                         android:textStyle="bold" />
                                                 </LinearLayout>
-                                                <!-- <LinearLayout
-                                                     android:layout_width="match_parent"
-                                                     android:layout_height="wrap_content"
-                                                     android:layout_marginLeft="5dp"
-                                                     android:layout_weight="1"
-                                                     android:orientation="vertical"
-                                                     android:padding="5dp">
 
-                                                     <TextView
-
-                                                         android:layout_width="wrap_content"
-                                                         android:layout_height="wrap_content"
-                                                         android:padding="5dp"
-                                                         android:text="Phone" />
-
-                                                     <TextView
-                                                         android:layout_width="wrap_content"
-                                                         android:layout_height="wrap_content"
-                                                         android:padding="5dp"
-
-                                                         android:text="@{user.phone}"
-                                                         android:textColor="@color/black"
-                                                         android:textSize="15sp"
-                                                         android:textStyle="bold" />
-                                                 </LinearLayout>
-
-                                            <LinearLayout
-                                                     android:layout_width="match_parent"
-                                                     android:layout_height="wrap_content"
-                                                     android:layout_marginLeft="5dp"
-                                                     android:layout_weight="1"
-                                                     android:orientation="vertical"
-                                                     android:padding="5dp">
-
-                                                     <TextView
-
-                                                         android:layout_width="wrap_content"
-                                                         android:layout_height="wrap_content"
-                                                         android:padding="5dp"
-                                                         android:text="Address" />
-
-                                                     <TextView
-                                                         android:layout_width="wrap_content"
-                                                         android:layout_height="wrap_content"
-                                                         android:padding="5dp"
-
-                                                         android:text="@{user.address}"
-                                                         android:textColor="@color/black"
-                                                         android:textSize="15sp"
-                                                         android:textStyle="bold" />
-                                                 </LinearLayout>-->
 
                                             </LinearLayout>
+
+
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bottom_line_gray"
+                                                android:orientation="horizontal">
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="5dp"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical"
+                                                android:padding="5dp">
+
+                                                <TextView
+
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:padding="5dp"
+                                                    android:text="If Other City" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:padding="5dp"
+
+                                                    android:id="@+id/tv_other_city"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="15sp"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="5dp"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical"
+                                                android:padding="5dp">
+
+                                                <TextView
+
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:padding="5dp"
+                                                    android:text="Zipcode" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:padding="5dp"
+
+                                                    android:id="@+id/tv_zipcode"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="15sp"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
 
                                             <!-- <LinearLayout
                                                  android:layout_width="match_parent"
@@ -1697,14 +1799,14 @@
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:padding="5dp"
-                                                        android:text="Family Type" />
+                                                        android:text="Family Name" />
 
                                                     <TextView
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_below="@+id/ftype_label"
                                                         android:padding="5dp"
-                                                        android:text="@{user.family_type}"
+                                                        android:id="@+id/tv_family_name"
                                                         android:textColor="@color/black"
                                                         android:textSize="15sp"
                                                         android:textStyle="bold" />

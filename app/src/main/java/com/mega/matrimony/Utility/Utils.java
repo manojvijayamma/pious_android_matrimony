@@ -11,9 +11,7 @@ public class Utils {
     public static final String USER_AGENT = "NI-AAPP";
 
     public static final String Base_url = "https://www.usnazranimatrimony.com/";
-    //public static final String Base_url = "https://www.mega-matrimony.narjisdemos.com/";
-    //public static final String Base_url = "http://192.168.1.111/mega_matrimony/original_script/v1.0/";//Working
-    //public static final String Base_url = "http://192.168.1.111/mega_matrimony/original_script/";//Deprecated
+    //public static final String Base_url = "http://localhost/pious/pious_usnazranimatrimony.com/";
     public static final String get_token = Base_url + "common_request/get_tocken";//?user_agent=NI-AAPP
     public static final String login = Base_url + "login/check_login_service";
     public static final String forgot = Base_url + "login/check_email_forgot";

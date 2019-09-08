@@ -8,8 +8,8 @@
     android:background="@android:color/transparent">
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="335dp"
+        android:layout_height="105dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -29,7 +29,9 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:text="@string/lbl_welcome_slide_1"
-        android:textColor="@color/black"
+            android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#880654"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

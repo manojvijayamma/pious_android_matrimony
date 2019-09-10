@@ -279,6 +279,18 @@ public class AdvanceSearchFragment extends Fragment {
                 }
             });
 
+
+            for (int i = 0; i < contry_ids.size(); i++) {
+
+                if (contry_ids.get(i).equals("215")){
+                    Log.d(">>>country",contry_ids.get(i));
+                    spin_country.setSelection(i);
+                }   
+            }
+           
+
+
+
             List<String> state_val = new ArrayList<>();
             state_val.add("State");
             List<String> state_ids = new ArrayList<>();

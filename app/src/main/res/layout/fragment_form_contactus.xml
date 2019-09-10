@@ -60,7 +60,8 @@
                             android:layout_marginTop="10dp"
                             android:layout_weight="0.45"
                             android:background="@drawable/background_with_shadow"
-                            android:gravity="center" />
+                            android:gravity="center" 
+                            app:ccp_defaultNameCode="US"/>
 
                         <EditText
                             android:id="@+id/et_mobile"

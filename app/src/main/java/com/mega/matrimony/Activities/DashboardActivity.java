@@ -242,7 +242,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         pro.add(new MenuChild("My Saved Search", "save_search"));
         pro.add(new MenuChild("Upload Video", "upload_video"));
         pro.add(new MenuChild("Upload ID Proof", "upload_id"));
-        pro.add(new MenuChild("Upload Horoscope", "upload_horo"));
+       // pro.add(new MenuChild("Upload Horoscope", "upload_horo"));
         pro.add(new MenuChild("Delete Account", "delete_account"));
         grp = new MenuGroup("My Profile", R.drawable.user_fill_pink, pro, "profile");
         list.add(grp);
@@ -254,7 +254,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         add.add(new MenuChild("Terms and Condition", "term_condition"));
         add.add(new MenuChild("About Us", "about"));
         add.add(new MenuChild("Report Misuse", "report"));
-        grp = new MenuGroup("Additional Setting", R.drawable.setting_pink, add, "add_setting");
+        grp = new MenuGroup("USN Matrimony", R.drawable.setting_pink, add, "add_setting");
         list.add(grp);
 
         grp = new MenuGroup("Message", R.drawable.message_pink, new ArrayList<MenuChild>(), "message");
@@ -270,7 +270,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         con.add(new MenuChild("Profile I Viewed", "profile_i_view"));
         con.add(new MenuChild("Viewed My Profile", "view_my_profile"));
         con.add(new MenuChild("Liked Profile", "like_profile"));
-        grp = new MenuGroup("Contact", R.drawable.phone, con, "contact");
+        grp = new MenuGroup("Profiles", R.drawable.phone, con, "contact");
         list.add(grp);
 
         grp = new MenuGroup("Express Interest", R.drawable.smile, new ArrayList<MenuChild>(), "exp_intrst");

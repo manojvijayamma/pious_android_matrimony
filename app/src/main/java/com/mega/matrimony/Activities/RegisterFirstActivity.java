@@ -530,6 +530,15 @@ public class RegisterFirstActivity extends AppCompatActivity implements View.OnC
             ArrayAdapter adp_con = new ArrayAdapter<String>(this, R.layout.spinner_item, contry);
             spin_country.setAdapter(adp_con);
             spin_country.setOnItemSelectedListener(this);
+            //common.setSelection(spin_country, contry, "215");
+            
+            for (int i = 0; i < contry.size(); i++) {
+                Log.d(">>>country",contry.get(i));
+                if (contry.get(i).equals("United States")){
+
+                        spin_country.setSelection(i);
+                }
+            }
 
             spin_state = (Spinner) findViewById(R.id.spin_state);
             List<String> stat = new ArrayList<>();

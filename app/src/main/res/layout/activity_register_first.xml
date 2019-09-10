@@ -148,7 +148,7 @@
                         android:layout_weight="0.40"
                         android:background="@drawable/background_with_shadow"
                         android:gravity="center"
-                        app:ccp_defaultNameCode="IN" />
+                        app:ccp_defaultNameCode="US" />
 
                     <EditText
                         android:id="@+id/et_mobile"

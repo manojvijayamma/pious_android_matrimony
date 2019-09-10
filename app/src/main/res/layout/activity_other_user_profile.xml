@@ -515,7 +515,7 @@
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:padding="5dp"
-                                                        android:text="If Other Caste" />
+                                                        android:text="If Other Diocese" />
 
                                                     <TextView
                                                         android:layout_width="wrap_content"
@@ -2244,6 +2244,7 @@
                                                     android:background="#ccc" />
 
                                                 <LinearLayout
+                                                    android:id="@+id/ll_phone"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
                                                     android:layout_marginLeft="5dp"
@@ -3140,7 +3141,8 @@
                                                         android:layout_marginLeft="5dp"
                                                         android:layout_weight="1"
                                                         android:orientation="vertical"
-                                                        android:padding="5dp">
+                                                        android:padding="5dp"
+                                                        android:visibility="invisible">
 
                                                         <TextView
 

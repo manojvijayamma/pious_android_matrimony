@@ -23,6 +23,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import android.widget.Switch;
+import android.util.Log;
 
 public class ContactSettingFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
@@ -39,6 +41,7 @@ public class ContactSettingFragment extends Fragment {
     Context context;
     Button btn_submit;
     ProgressDialog pd;
+    private Switch sw_phone_visi;
 
     public ContactSettingFragment() {
         // Required empty public constructor
@@ -75,6 +78,7 @@ public class ContactSettingFragment extends Fragment {
         common.setDrawableLeftTextViewLeft(R.drawable.eye_pink,lbl_contact_visi);
         btn_submit=(Button)view.findViewById(R.id.btn_id);
         grp_visi=(RadioGroup)view.findViewById(R.id.grp_visi);
+        sw_phone_visi = (Switch)view.findViewById(R.id.sw_phone_visi);
 
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,19 +106,28 @@ public class ContactSettingFragment extends Fragment {
             @Override
             public void onResponse(String response) {
                 pd.dismiss();
-                //  Log.d("resp",response);
+                  
                 try {
                     JSONObject object=new JSONObject(response);
                     session.setUserData(SessionManager.TOKEN,object.getString("tocken"));
                     if (object.getString("status").equals("success")){
                         JSONObject data=object.getJSONObject("data");
-
+                        Log.d(">>resp",data.getString("allow_contact"));
                         String contact_view_security=data.getString("contact_view_security");
+                        String allow_contact=data.getString("allow_contact");
                         if (contact_view_security.equals("0")){
                             ((RadioButton)grp_visi.getChildAt(1)).setChecked(true);
                         }else if (contact_view_security.equals("1")){
                             ((RadioButton)grp_visi.getChildAt(0)).setChecked(true);
                         }
+
+                        if (allow_contact.equals("0")){
+                            sw_phone_visi.setChecked(false);
+                        }else if (allow_contact.equals("1")){
+                            sw_phone_visi.setChecked(true);
+                        }
+
+                        
 
                     }
                 } catch (JSONException e) {
@@ -131,6 +144,14 @@ public class ContactSettingFragment extends Fragment {
 
     private void changeContact() {
         int pos=grp_visi.getCheckedRadioButtonId();
+        String allow_contact;;
+
+        if (sw_phone_visi.isChecked())
+            allow_contact = sw_phone_visi.getTextOn().toString();
+        else
+            allow_contact = sw_phone_visi.getTextOff().toString();
+
+
         if (pos==-1){
             common.showToast("Please select contact visibility");
             return;
@@ -150,6 +171,8 @@ public class ContactSettingFragment extends Fragment {
         }else if(btn.getText().toString().equals("Show to only express interest accepted and paid members")){
             param.put("contact_view_security","0");
         }
+
+        param.put("allow_contact",allow_contact);
 
         common.makePostRequest(Utils.contact_setting, param, new Response.Listener<String>() {
             @Override

@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -13,8 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.mega.matrimony.Custom.TouchImageView;
-import com.mega.matrimony.R;
+import com.mega.usnazrani.Custom.TouchImageView;
+import com.mega.usnazrani.R;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;

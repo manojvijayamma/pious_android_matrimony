@@ -1,4 +1,4 @@
-package com.mega.matrimony.Utility;
+package com.mega.usnazrani.Utility;
 
 
 import java.io.IOException;
@@ -11,8 +11,8 @@ import android.content.SharedPreferences.Editor;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 
-import com.mega.matrimony.Activities.LoginActivity;
-import com.mega.matrimony.Application.MyApplication;
+import com.mega.usnazrani.Activities.LoginActivity;
+import com.mega.usnazrani.Application.MyApplication;
 
 
 public class SessionManager {

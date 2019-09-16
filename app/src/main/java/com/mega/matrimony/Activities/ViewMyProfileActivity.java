@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -22,12 +22,12 @@ import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.mega.matrimony.Utility.AppDebugLog;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.MyData;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Utility.AppDebugLog;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.MyData;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 
 import com.squareup.picasso.Picasso;
 
@@ -40,7 +40,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 
-import com.mega.matrimony.databinding.ActivityViewMyProfileBinding;
+import com.mega.usnazrani.databinding.ActivityViewMyProfileBinding;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import android.util.Log;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mega.matrimony.Activities.EditProfileActivity">
+    tools:context="com.mega.usnazrani.Activities.EditProfileActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -213,7 +213,7 @@
                             android:padding="10dp"
                             android:src="@drawable/user_pink" />
 
-                        <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        <com.mega.usnazrani.Custom.MultiSelectionSpinner
                             android:id="@+id/spin_lang"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -1179,7 +1179,7 @@
                             android:padding="10dp"
                             android:src="@drawable/edu_pink" />
 
-                        <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        <com.mega.usnazrani.Custom.MultiSelectionSpinner
                             android:id="@+id/spin_edu"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"

@@ -1,4 +1,4 @@
-package com.mega.matrimony.Model;
+package com.mega.usnazrani.Model;
 
 public class ConversationItem {
     String id,sender,receiver,content,is_sent_receive,sent_on,photo_url;

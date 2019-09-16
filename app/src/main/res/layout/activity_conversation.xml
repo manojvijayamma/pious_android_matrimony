@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:focusable="false"
     android:focusableInTouchMode="true"
-    tools:context="com.mega.matrimony.Activities.ConversationActivity">
+    tools:context="com.mega.usnazrani.Activities.ConversationActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"

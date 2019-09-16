@@ -1,4 +1,4 @@
-package com.mega.matrimony.Utility;
+package com.mega.usnazrani.Utility;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;

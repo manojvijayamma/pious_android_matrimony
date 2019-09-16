@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mega.matrimony">
+    package="com.mega.usnazrani">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -38,7 +38,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="com.mega.matrimony.active_act" />
+                <action android:name="com.mega.usnazrani.active_act" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -130,7 +130,7 @@
             android:parentActivityName=".Activities.QuickMessageActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
-                <action android:name="com.mega.matrimony.message" />
+                <action android:name="com.mega.usnazrani.message" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data
@@ -151,7 +151,7 @@
             android:parentActivityName=".Activities.DashboardActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
-                <action android:name="com.mega.matrimony.interest_receive" />
+                <action android:name="com.mega.usnazrani.interest_receive" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data
@@ -180,7 +180,7 @@
             android:parentActivityName=".Activities.DashboardActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
-                <action android:name="com.mega.matrimony.other" />
+                <action android:name="com.mega.usnazrani.other" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data
@@ -205,7 +205,7 @@
             android:parentActivityName=".Activities.DashboardActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
-                <action android:name="com.mega.matrimony.photo_password" />
+                <action android:name="com.mega.usnazrani.photo_password" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data
@@ -245,7 +245,7 @@
         <!-- File provider-->
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.mega.matrimony.fileprovider"
+            android:authorities="com.mega.usnazrani.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

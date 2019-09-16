@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mega.matrimony.Activities.EditPreferenceActivity">
+    tools:context="com.mega.usnazrani.Activities.EditPreferenceActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout3"
@@ -74,7 +74,7 @@
                         android:padding="10dp"
                         android:src="@drawable/heart_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_looking"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -106,7 +106,7 @@
                         android:padding="10dp"
                         android:src="@drawable/hoby_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_complx"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -266,7 +266,7 @@
                         android:padding="10dp"
                         android:src="@drawable/user_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_body_type"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -298,7 +298,7 @@
                         android:padding="10dp"
                         android:src="@drawable/eat_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_eat"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -330,7 +330,7 @@
                         android:padding="10dp"
                         android:src="@drawable/smok_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_smok"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -362,7 +362,7 @@
                         android:padding="10dp"
                         android:src="@drawable/drink_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_drink"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -394,7 +394,7 @@
                         android:padding="10dp"
                         android:src="@drawable/tongue_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_mtongue"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -477,7 +477,7 @@
                         android:padding="10dp"
                         android:src="@drawable/religion_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_religion"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -509,7 +509,7 @@
                         android:padding="10dp"
                         android:src="@drawable/caste_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_caste"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -575,7 +575,7 @@
                         android:padding="10dp"
                         android:src="@drawable/star_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_star"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -627,7 +627,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp" />
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:paddingLeft="37dp"
                         android:paddingStart="37dp"
                         app:backgroundTint="@color/red"
@@ -661,7 +661,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp" />
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:paddingLeft="37dp"
                         android:paddingStart="37dp"
                         app:backgroundTint="@color/red"
@@ -694,7 +694,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp" />
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:paddingLeft="37dp"
                         app:backgroundTint="@color/red"
                         android:paddingStart="37dp"
@@ -728,7 +728,7 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp" />
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:paddingLeft="37dp"
                         android:paddingStart="37dp"
                         app:backgroundTint="@color/red"
@@ -814,7 +814,7 @@
                         android:padding="10dp"
                         android:src="@drawable/country_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_country"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -846,7 +846,7 @@
                         android:padding="10dp"
                         android:src="@drawable/state_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_state"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -878,7 +878,7 @@
                         android:padding="10dp"
                         android:src="@drawable/city_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_city"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -910,7 +910,7 @@
                         android:padding="10dp"
                         android:src="@drawable/city_pink" />
 
-                    <com.mega.matrimony.Custom.MultiSelectionSpinner
+                    <com.mega.usnazrani.Custom.MultiSelectionSpinner
                         android:id="@+id/spin_residence"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

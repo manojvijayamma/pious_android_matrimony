@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="com.mega.matrimony.Fragments.RecommendationFragment">
+    tools:context="com.mega.usnazrani.Fragments.RecommendationFragment">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <com.mega.matrimony.Custom.NonScrollListView
+    <com.mega.usnazrani.Custom.NonScrollListView
         android:divider="@null"
         android:id="@+id/lv_recom"
         android:layout_width="match_parent"

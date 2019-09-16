@@ -1,4 +1,4 @@
-package com.mega.matrimony.Firebase;
+package com.mega.usnazrani.Firebase;
 
 
 import android.app.ActivityManager;
@@ -20,8 +20,8 @@ import android.text.Html;
 import android.text.TextUtils;
 import android.util.Patterns;
 
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.Utils;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package com.mega.matrimony.Model;
+package com.mega.usnazrani.Model;
 
 public class Message_item {
     String id,content,read_status,receiver,receiver_delete,sender,sender_delete,sent_on,subject,display_name,image;

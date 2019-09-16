@@ -1,4 +1,4 @@
-package com.mega.matrimony.Adapter;
+package com.mega.usnazrani.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,10 +14,10 @@ import android.widget.TextView;
 
 import com.like.LikeButton;
 import com.like.OnLikeListener;
-import com.mega.matrimony.Activities.OtherUserProfileActivity;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Model.DashboardItem;
-import com.mega.matrimony.R;
+import com.mega.usnazrani.Activities.OtherUserProfileActivity;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Model.DashboardItem;
+import com.mega.usnazrani.R;
 
 import java.util.List;
 

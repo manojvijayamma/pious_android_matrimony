@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -29,16 +29,16 @@ import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.mega.matrimony.Adapter.MenuListAdapter;
-import com.mega.matrimony.Application.MyApplication;
-import com.mega.matrimony.Fragments.DiscoverFragment;
-import com.mega.matrimony.Fragments.RecommendationFragment;
-import com.mega.matrimony.Model.MenuChild;
-import com.mega.matrimony.Model.MenuGroup;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Adapter.MenuListAdapter;
+import com.mega.usnazrani.Application.MyApplication;
+import com.mega.usnazrani.Fragments.DiscoverFragment;
+import com.mega.usnazrani.Fragments.RecommendationFragment;
+import com.mega.usnazrani.Model.MenuChild;
+import com.mega.usnazrani.Model.MenuGroup;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;

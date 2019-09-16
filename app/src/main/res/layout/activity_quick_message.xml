@@ -8,7 +8,7 @@
     android:focusableInTouchMode="true"
     android:focusable="false"
     android:background="@color/lighter_gray"
-    tools:context="com.mega.matrimony.Activities.QuickMessageActivity">
+    tools:context="com.mega.usnazrani.Activities.QuickMessageActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

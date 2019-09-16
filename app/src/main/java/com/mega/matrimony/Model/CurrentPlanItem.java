@@ -1,4 +1,4 @@
-package com.mega.matrimony.Model;
+package com.mega.usnazrani.Model;
 
 public class CurrentPlanItem {
     String plan_name,currency,plan_amount,plan_activated,plan_expired,plan_duration,message_used,message,contacts_used,

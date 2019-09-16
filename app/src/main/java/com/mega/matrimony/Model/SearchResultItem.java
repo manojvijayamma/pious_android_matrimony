@@ -1,4 +1,4 @@
-package com.mega.matrimony.Model;
+package com.mega.usnazrani.Model;
 
 public class SearchResultItem {
     String name;

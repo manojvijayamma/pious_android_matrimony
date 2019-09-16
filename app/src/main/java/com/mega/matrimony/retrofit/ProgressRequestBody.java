@@ -1,4 +1,4 @@
-package com.mega.matrimony.retrofit;
+package com.mega.usnazrani.retrofit;
 
 import android.os.Handler;
 import android.os.Looper;

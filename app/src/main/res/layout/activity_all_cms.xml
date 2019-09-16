@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#b8f2f2f2"
-    tools:context="com.mega.matrimony.Activities.AllCmsActivity">
+    tools:context="com.mega.usnazrani.Activities.AllCmsActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

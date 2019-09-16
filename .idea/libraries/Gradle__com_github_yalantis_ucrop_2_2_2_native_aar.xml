@@ -7,9 +7,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4626a3d54ef082a26566a783a05aa20b/ucrop-2.2.2-native/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4626a3d54ef082a26566a783a05aa20b/ucrop-2.2.2-native/res" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.yalantis/ucrop/2.2.2-native/17a10b602647c08786bb135a3552e2a7079de513/ucrop-2.2.2-native-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.yalantis/ucrop/2.2.2-native/b97793db4276f16577919ca23fab4d381ccecb89/ucrop-2.2.2-native-sources.jar!/" />
     </SOURCES>

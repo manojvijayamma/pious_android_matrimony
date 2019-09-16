@@ -1,4 +1,4 @@
-package com.mega.matrimony.Fragments;
+package com.mega.usnazrani.Fragments;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -14,10 +14,10 @@ import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

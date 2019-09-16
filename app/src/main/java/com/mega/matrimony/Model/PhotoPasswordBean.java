@@ -1,4 +1,4 @@
-package com.mega.matrimony.Model;
+package com.mega.usnazrani.Model;
 
 public class PhotoPasswordBean {
     String name,tag,matri_id,id,image,about,image_approval,date,receiver_response,ph_receiver_id,ph_requester_id,photo_view_status,

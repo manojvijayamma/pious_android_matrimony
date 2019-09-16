@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -38,12 +38,12 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-import com.mega.matrimony.Application.MyApplication;
-import com.mega.matrimony.Network.ConnectionDetector;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Application.MyApplication;
+import com.mega.usnazrani.Network.ConnectionDetector;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 import me.relex.circleindicator.CircleIndicator;
 
 import static android.Manifest.permission.ACCESS_NETWORK_STATE;

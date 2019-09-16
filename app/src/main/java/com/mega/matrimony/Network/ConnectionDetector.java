@@ -4,7 +4,7 @@
  * Created on Dec 30, 2015
  */
 
-package com.mega.matrimony.Network;
+package com.mega.usnazrani.Network;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

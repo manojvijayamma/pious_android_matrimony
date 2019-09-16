@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -34,13 +34,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.volley.Response;
-import com.mega.matrimony.Custom.EndlessRecyclerViewScrollListener;
-import com.mega.matrimony.Custom.RecyclerItemTouchHelper;
-import com.mega.matrimony.Model.QuickItem;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Custom.EndlessRecyclerViewScrollListener;
+import com.mega.usnazrani.Custom.RecyclerItemTouchHelper;
+import com.mega.usnazrani.Model.QuickItem;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;

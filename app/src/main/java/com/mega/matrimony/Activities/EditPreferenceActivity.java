@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,13 +17,13 @@ import android.widget.Spinner;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.mega.matrimony.Application.MyApplication;
-import com.mega.matrimony.Custom.MultiSelectionSpinner;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.AppDebugLog;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Application.MyApplication;
+import com.mega.usnazrani.Custom.MultiSelectionSpinner;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.AppDebugLog;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

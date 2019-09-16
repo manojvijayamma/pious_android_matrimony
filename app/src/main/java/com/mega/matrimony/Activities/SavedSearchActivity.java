@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -21,12 +21,12 @@ import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.mega.matrimony.Model.SavedItem;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.AppDebugLog;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Model.SavedItem;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.AppDebugLog;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -332,7 +332,7 @@ public class SavedSearchActivity extends AppCompatActivity {
             rowView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(context, com.mega.matrimony.Activities.SearchResultActivity.class);
+                    Intent i = new Intent(context, com.mega.usnazrani.Activities.SearchResultActivity.class);
                     AppDebugLog.print("param in SaveSearchActivity : " + item.getSearchData());
                     i.putExtra("searchData", Common.getJsonStringFromObject(item.getSearchData()));
                     startActivity(i);

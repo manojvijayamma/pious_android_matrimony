@@ -1,10 +1,10 @@
-package com.mega.matrimony.retrofit;
+package com.mega.usnazrani.retrofit;
 
 import com.google.gson.JsonObject;
 
 import java.util.Map;
 
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Utility.Utils;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.Call;

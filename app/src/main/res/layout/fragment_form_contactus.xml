@@ -11,7 +11,7 @@
     android:focusableInTouchMode="true"
     android:background="@color/white"
     android:id="@+id/main"
-    tools:context="com.mega.matrimony.Fragments.FormContactusFragment">
+    tools:context="com.mega.usnazrani.Fragments.FormContactusFragment">
 
     <android.support.v4.widget.NestedScrollView
 

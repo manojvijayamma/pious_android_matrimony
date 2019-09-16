@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:focusable="false"
     android:focusableInTouchMode="true"
-    tools:context="com.mega.matrimony.Activities.UploadVideoActivity">
+    tools:context="com.mega.usnazrani.Activities.UploadVideoActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

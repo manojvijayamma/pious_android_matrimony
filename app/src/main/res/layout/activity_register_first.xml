@@ -8,7 +8,7 @@
     android:focusable="false"
     android:background="@drawable/bg_image"
     android:focusableInTouchMode="true"
-    tools:context="com.mega.matrimony.Activities.RegisterFirstActivity">
+    tools:context="com.mega.usnazrani.Activities.RegisterFirstActivity">
 
     <ScrollView
         android:id="@+id/ragi_scroll"
@@ -619,7 +619,7 @@
                             android:padding="10dp"
                             android:src="@drawable/edu_pink" />
 
-                        <com.mega.matrimony.Custom.MultiSelectionSpinner
+                        <com.mega.usnazrani.Custom.MultiSelectionSpinner
                             android:id="@+id/spin_edu"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"

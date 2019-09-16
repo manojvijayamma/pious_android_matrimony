@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:padding="5dp"
     android:background="#b8f2f2f2"
-    tools:context="com.mega.matrimony.Fragments.IdSearchFragment">
+    tools:context="com.mega.usnazrani.Fragments.IdSearchFragment">
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"

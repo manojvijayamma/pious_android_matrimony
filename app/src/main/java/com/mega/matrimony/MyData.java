@@ -1,4 +1,4 @@
-package com.mega.matrimony;
+package com.mega.usnazrani;
 
 public class MyData {
     String name,marital_status,m_tongue,language,height,weight,dob,age,religion,caste,subcaste,manglik,star,horoscope,gothra,moonsign,

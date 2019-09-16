@@ -1,4 +1,4 @@
-package com.mega.matrimony.Utility;
+package com.mega.usnazrani.Utility;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -31,10 +31,10 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.mega.matrimony.Application.MyApplication;
-import com.mega.matrimony.Custom.MySnake;
-import com.mega.matrimony.Network.ConnectionDetector;
-import com.mega.matrimony.R;
+import com.mega.usnazrani.Application.MyApplication;
+import com.mega.usnazrani.Custom.MySnake;
+import com.mega.usnazrani.Network.ConnectionDetector;
+import com.mega.usnazrani.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

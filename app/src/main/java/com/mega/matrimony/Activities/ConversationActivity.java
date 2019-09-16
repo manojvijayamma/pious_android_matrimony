@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
@@ -26,13 +26,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.volley.Response;
-import com.mega.matrimony.Firebase.MyFirebaseMessagingService;
-import com.mega.matrimony.Firebase.NotificationUtils;
-import com.mega.matrimony.Model.ConversationItem;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Firebase.MyFirebaseMessagingService;
+import com.mega.usnazrani.Firebase.NotificationUtils;
+import com.mega.usnazrani.Model.ConversationItem;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;

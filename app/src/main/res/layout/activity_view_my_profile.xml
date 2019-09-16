@@ -6,7 +6,7 @@
 
         <variable
             name="user"
-            type="com.mega.matrimony.MyData" />
+            type="com.mega.usnazrani.MyData" />
     </data>
 
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
@@ -16,7 +16,7 @@
         android:background="#f4f3f3"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.mega.matrimony.Activities.ViewMyProfileActivity"
+        tools:context="com.mega.usnazrani.Activities.ViewMyProfileActivity"
         tools:showIn="@layout/activity_view_my_profile">
 
         <android.support.design.widget.AppBarLayout

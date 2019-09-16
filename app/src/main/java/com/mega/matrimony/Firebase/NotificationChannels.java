@@ -1,4 +1,4 @@
-package com.mega.matrimony.Firebase;
+package com.mega.usnazrani.Firebase;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;

@@ -1,4 +1,4 @@
-package com.mega.matrimony.Adapter;
+package com.mega.usnazrani.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,8 +8,8 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mega.matrimony.Model.MenuGroup;
-import com.mega.matrimony.R;
+import com.mega.usnazrani.Model.MenuGroup;
+import com.mega.usnazrani.R;
 
 import java.util.List;
 

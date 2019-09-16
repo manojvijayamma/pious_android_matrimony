@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
 
-    tools:context="com.mega.matrimony.Activities.GallaryActivity">
+    tools:context="com.mega.usnazrani.Activities.GallaryActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager_gallary"

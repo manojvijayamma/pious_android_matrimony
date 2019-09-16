@@ -1,9 +1,9 @@
-package com.mega.matrimony.retrofit;
+package com.mega.usnazrani.retrofit;
 
 
 
 
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Utility.Utils;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

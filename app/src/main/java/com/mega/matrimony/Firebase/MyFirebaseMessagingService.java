@@ -1,4 +1,4 @@
-package com.mega.matrimony.Firebase;
+package com.mega.usnazrani.Firebase;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +9,9 @@ import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.mega.matrimony.Utility.AppDebugLog;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Utility.AppDebugLog;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 
 import java.sql.Timestamp;
 import java.util.Date;

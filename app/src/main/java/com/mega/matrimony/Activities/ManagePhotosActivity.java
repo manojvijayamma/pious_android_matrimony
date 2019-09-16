@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
@@ -11,10 +11,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Fragments.MyPhotoFragment;
-import com.mega.matrimony.Fragments.PhotoPasswordFragment;
-import com.mega.matrimony.R;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Fragments.MyPhotoFragment;
+import com.mega.usnazrani.Fragments.PhotoPasswordFragment;
+import com.mega.usnazrani.R;
 
 import java.util.ArrayList;
 import java.util.List;

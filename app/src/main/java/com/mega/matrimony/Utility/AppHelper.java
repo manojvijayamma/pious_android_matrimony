@@ -1,4 +1,4 @@
-package com.mega.matrimony.Utility;
+package com.mega.usnazrani.Utility;
 
 import android.content.ContentResolver;
 import android.content.Context;

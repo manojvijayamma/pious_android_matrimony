@@ -1,11 +1,11 @@
-package com.mega.matrimony.Custom;
+package com.mega.usnazrani.Custom;
 
 import android.graphics.Canvas;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 
-import com.mega.matrimony.Activities.QuickMessageActivity;
+import com.mega.usnazrani.Activities.QuickMessageActivity;
 
 
 /**

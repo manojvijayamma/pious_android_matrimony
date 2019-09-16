@@ -1,4 +1,4 @@
-package com.mega.matrimony.Fragments;
+package com.mega.usnazrani.Fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -24,16 +24,16 @@ import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.mega.matrimony.Activities.OtherUserProfileActivity;
-import com.mega.matrimony.Activities.PlanListActivity;
-import com.mega.matrimony.Application.MyApplication;
-import com.mega.matrimony.Custom.TouchImageView;
-import com.mega.matrimony.Model.PhotoPasswordBean;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.AppDebugLog;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Activities.OtherUserProfileActivity;
+import com.mega.usnazrani.Activities.PlanListActivity;
+import com.mega.usnazrani.Application.MyApplication;
+import com.mega.usnazrani.Custom.TouchImageView;
+import com.mega.usnazrani.Model.PhotoPasswordBean;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.AppDebugLog;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;

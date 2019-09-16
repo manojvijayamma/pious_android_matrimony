@@ -1,4 +1,4 @@
-package com.mega.matrimony.Fragments;
+package com.mega.usnazrani.Fragments;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -20,14 +20,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.crystal.crystalrangeseekbar.interfaces.OnRangeSeekbarChangeListener;
 import com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar;
-import com.mega.matrimony.Activities.SearchResultActivity;
-import com.mega.matrimony.Application.MyApplication;
-import com.mega.matrimony.Custom.MultiSelectionSpinner;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.AppDebugLog;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Activities.SearchResultActivity;
+import com.mega.usnazrani.Application.MyApplication;
+import com.mega.usnazrani.Custom.MultiSelectionSpinner;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.AppDebugLog;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

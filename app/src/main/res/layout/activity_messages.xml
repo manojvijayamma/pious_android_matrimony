@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
     android:focusable="false"
-    tools:context="com.mega.matrimony.Activities.MessagesActivity">
+    tools:context="com.mega.usnazrani.Activities.MessagesActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

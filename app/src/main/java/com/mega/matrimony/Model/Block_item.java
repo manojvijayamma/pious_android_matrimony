@@ -1,4 +1,4 @@
-package com.mega.matrimony.Model;
+package com.mega.usnazrani.Model;
 
 public class Block_item {
     String name,image,detail,matri_id,image_approval,photo_view_status,user_id,photo_view_count;

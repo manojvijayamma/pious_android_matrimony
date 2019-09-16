@@ -1,4 +1,4 @@
-package com.mega.matrimony.Model;
+package com.mega.usnazrani.Model;
 
 public class QuickItem {
     String id,otherID,content,sent_on,unread_count,photo_url;

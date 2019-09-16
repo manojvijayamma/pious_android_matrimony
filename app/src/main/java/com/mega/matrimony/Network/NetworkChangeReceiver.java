@@ -1,4 +1,4 @@
-package com.mega.matrimony.Network;
+package com.mega.usnazrani.Network;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.net.NetworkInfo;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 
-import com.mega.matrimony.Application.MyApplication;
+import com.mega.usnazrani.Application.MyApplication;
 
 public class NetworkChangeReceiver extends BroadcastReceiver {
 

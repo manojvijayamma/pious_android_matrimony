@@ -1,4 +1,4 @@
-package com.mega.matrimony.Application;
+package com.mega.usnazrani.Application;
 
 import android.app.Activity;
 import android.app.Application;
@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-import com.mega.matrimony.Utility.FontsOverride;
+import com.mega.usnazrani.Utility.FontsOverride;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;

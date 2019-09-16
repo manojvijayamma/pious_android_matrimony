@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -24,13 +24,13 @@ import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.mega.matrimony.Application.MyApplication;
-import com.mega.matrimony.OtherUser;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
-import com.mega.matrimony.databinding.ActivityOtherUserProfileBinding;
+import com.mega.usnazrani.Application.MyApplication;
+import com.mega.usnazrani.OtherUser;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
+import com.mega.usnazrani.databinding.ActivityOtherUserProfileBinding;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;

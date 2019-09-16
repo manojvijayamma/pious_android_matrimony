@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#b8f2f2f2"
     android:padding="5dp"
-    tools:context="com.mega.matrimony.Fragments.MyPhotoFragment">
+    tools:context="com.mega.usnazrani.Fragments.MyPhotoFragment">
 
     <ScrollView
         android:layout_width="match_parent"

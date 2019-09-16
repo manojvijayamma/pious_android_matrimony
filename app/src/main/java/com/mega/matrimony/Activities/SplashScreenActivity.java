@@ -1,4 +1,4 @@
-package com.mega.matrimony.Activities;
+package com.mega.usnazrani.Activities;
 
 import android.app.Application;
 import android.content.Context;
@@ -15,20 +15,20 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.google.gson.JsonObject;
-import com.mega.matrimony.retrofit.AppApiService;
-import com.mega.matrimony.retrofit.RetrofitClient;
+import com.mega.usnazrani.retrofit.AppApiService;
+import com.mega.usnazrani.retrofit.RetrofitClient;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.mega.matrimony.Application.MyApplication;
-import com.mega.matrimony.Network.ConnectionDetector;
-import com.mega.matrimony.R;
-import com.mega.matrimony.Utility.AppDebugLog;
-import com.mega.matrimony.Utility.Common;
-import com.mega.matrimony.Utility.SessionManager;
-import com.mega.matrimony.Utility.Utils;
+import com.mega.usnazrani.Application.MyApplication;
+import com.mega.usnazrani.Network.ConnectionDetector;
+import com.mega.usnazrani.R;
+import com.mega.usnazrani.Utility.AppDebugLog;
+import com.mega.usnazrani.Utility.Common;
+import com.mega.usnazrani.Utility.SessionManager;
+import com.mega.usnazrani.Utility.Utils;
 
 import java.util.HashMap;
 

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.mega.matrimony.Custom.TouchImageView
+    <com.mega.usnazrani.Custom.TouchImageView
         android:id="@+id/myZoomageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

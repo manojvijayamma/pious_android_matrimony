@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="com.mega.matrimony.Activities.SavedSearchActivity">
+    tools:context="com.mega.usnazrani.Activities.SavedSearchActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

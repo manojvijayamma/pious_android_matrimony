@@ -1,4 +1,4 @@
-package com.mega.matrimony.Adapter;
+package com.mega.usnazrani.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -12,8 +12,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mega.matrimony.Model.Message_item;
-import com.mega.matrimony.R;
+import com.mega.usnazrani.Model.Message_item;
+import com.mega.usnazrani.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

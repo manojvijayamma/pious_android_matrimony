@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_image"
-    tools:context="com.mega.matrimony.Activities.LoginActivity">
+    tools:context="com.mega.usnazrani.Activities.LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"

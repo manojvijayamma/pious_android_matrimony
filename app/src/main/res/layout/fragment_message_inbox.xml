@@ -6,7 +6,7 @@
     android:id="@+id/lay_const"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mega.matrimony.Fragments.MessageInboxFragment">
+    tools:context="com.mega.usnazrani.Fragments.MessageInboxFragment">
 
         <EditText
             android:id="@+id/search_view"

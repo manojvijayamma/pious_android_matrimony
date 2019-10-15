@@ -26,7 +26,7 @@ import java.util.HashMap;
 
 public class PaymentWebView extends AppCompatActivity {
 
-    String Total_amount,Method,Plan_id,plan_name;
+    String Total_amount,Method,Plan_id,plan_name, card_name, card_number,card_month,card_year,card_cvv;
     private WebView web_payment;
     SessionManager session;
     Common common;
@@ -57,10 +57,31 @@ public class PaymentWebView extends AppCompatActivity {
             if (b.containsKey("plan_name")){
                 plan_name=b.getString("plan_name");
             }
+            card_name="";
+            card_number="";
+            card_month="";
+            card_year="";
+            card_cvv="";
+            if (b.containsKey("card_name")){
+                card_name=b.getString("card_name");
+            }
+            if (b.containsKey("card_number")){
+                card_number=b.getString("card_number");
+            }
+            if (b.containsKey("card_month")){
+                card_month=b.getString("card_month");
+            }
+            if (b.containsKey("card_year")){
+                card_year=b.getString("card_year");
+            }
+            if (b.containsKey("card_cvv")){
+                card_cvv=b.getString("card_cvv");
+            }
+
         }
 
         String url= Utils.payment_url+session.getLoginData(SessionManager.KEY_USER_ID)+"/"+Method+"/"+Plan_id+"/"+plan_name+
-               "/"+Total_amount;
+               "/"+Total_amount+"/"+card_name+"/"+card_number+"/"+card_month+"/"+card_year+"/"+card_cvv;
         Log.d("weburl",url);
         web_payment.getSettings().setLoadsImagesAutomatically(true);
         web_payment.getSettings().setJavaScriptEnabled(true);

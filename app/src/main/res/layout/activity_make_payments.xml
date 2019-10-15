@@ -382,8 +382,227 @@
 
                     </com.mega.usnazrani.Custom.NonScrollListView>
 
+
+
+                    <LinearLayout
+                        android:id="@+id/lay_authorize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:orientation="vertical"
+                        android:visibility="invisible"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_pay">
+
+
+
+
+                        <LinearLayout
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_name_on_card"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:padding="0dp"
+                                android:text="Name on card"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:layout_gravity="left"/>
+
+                            <EditText
+                                android:id="@+id/et_name_on_card"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                style="@style/editText"
+                                android:paddingLeft="5dp"
+                                android:background="@drawable/background_with_shadow"
+                                android:drawablePadding="10dp"
+                                android:layout_gravity="right"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_card_number"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:padding="0dp"
+                                android:text="Card Number"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:layout_gravity="left"/>
+
+                            <EditText
+                                android:id="@+id/et_card_number"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                style="@style/editText"
+                                android:paddingLeft="5dp"
+                                android:background="@drawable/background_with_shadow"
+                                android:drawablePadding="10dp"
+                                android:layout_gravity="right"/>
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                           >
+
+                            <TextView
+                                android:id="@+id/tv_expiry_month"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:padding="0dp"
+                                android:text="Expiry month"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:layout_gravity="left"/>
+
+                            <EditText
+                                android:id="@+id/et_expiry_month"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                style="@style/editText"
+                                android:hint="Eg: MM"
+                                android:paddingLeft="5dp"
+                                android:background="@drawable/background_with_shadow"
+                                android:drawablePadding="10dp"
+                                android:layout_gravity="right"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                           >
+
+                            <TextView
+                                android:id="@+id/tv_expiry_year"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:padding="0dp"
+                                android:text="Expiry year"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+
+                                android:layout_gravity="left"/>
+
+                            <EditText
+                                android:id="@+id/et_expiry_year"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                style="@style/editText"
+                                android:hint="Eg: YYYY"
+                                android:paddingLeft="5dp"
+                                android:background="@drawable/background_with_shadow"
+                                android:drawablePadding="10dp"
+                                android:layout_gravity="right"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            >
+
+
+                            <TextView
+                                android:id="@+id/tv_card_cvv"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:padding="0dp"
+                                android:text="Cvv"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:layout_gravity="left"/>
+
+                            <EditText
+                                android:id="@+id/et_card_cvv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                style="@style/editText"
+                                android:paddingLeft="5dp"
+                                android:background="@drawable/background_with_shadow"
+                                android:drawablePadding="10dp"
+                                android:layout_gravity="right"/>
+
+                        </LinearLayout>
+
+
+
+
+
+                        <Button
+                            android:id="@+id/btn_pay_authorize"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:textAllCaps="false"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/round_effect"
+                            android:text="Pay Now"
+                            android:textColor="@color/White"
+
+                   />
+
+
+
+
+
+                    </LinearLayout>
+
+
+
                     <Button
                         android:id="@+id/btn_pay"
+                        android:visibility="invisible"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginStart="16dp"
@@ -398,6 +617,9 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/lv_method" />
+
+
+
 
                     <LinearLayout
                         android:id="@+id/lay_bank"

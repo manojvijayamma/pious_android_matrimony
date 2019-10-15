@@ -45,13 +45,13 @@ public class MakePaymentsActivity extends AppCompatActivity {
     String plan_name="",plan_id="";
     private TextView tv_name,tv_duration,tv_amount,tv_tax,tv_discount,tv_total,tv_label_tex,tv_bank_label,tv_disc_label;
     private LinearLayout lay_two,lay_code;
-    private EditText et_code;
-    LinearLayout lay_bank;
+    private EditText et_code, et_name_on_card, et_card_number, et_expiry_month, et_expiry_year, et_card_cvv;
+    LinearLayout lay_bank, lay_authorize;
     //private RadioButton rad_biz,rad_payu,rad_paypal,rad_cc;
     //private RadioGroup rad_grp;
     private NonScrollListView lv_method;
     Common common;
-    private Button btn_pay,btn_redeem;
+    private Button btn_pay,btn_redeem, btn_pay_authorize;
     JSONObject plan_data;
     float total_amt;
     ProgressDialog pd;
@@ -85,10 +85,19 @@ public class MakePaymentsActivity extends AppCompatActivity {
         lay_code=(LinearLayout)findViewById(R.id.lay_code);
 
         et_code=(EditText) findViewById(R.id.et_code);
+        et_name_on_card=(EditText) findViewById(R.id.et_name_on_card);
+        et_card_number=(EditText) findViewById(R.id.et_card_number);
+        et_expiry_month=(EditText) findViewById(R.id.et_expiry_month);
+        et_expiry_year=(EditText) findViewById(R.id.et_expiry_year);
+        et_card_cvv=(EditText) findViewById(R.id.et_card_cvv);
+
         btn_pay=(Button) findViewById(R.id.btn_pay);
         btn_redeem=(Button) findViewById(R.id.btn_redeem);
+        btn_pay_authorize=(Button) findViewById(R.id.btn_pay_authorize);
+
         lv_method=(NonScrollListView)findViewById(R.id.lv_method);
         lay_bank=(LinearLayout)findViewById(R.id.lay_bank);
+        lay_authorize=(LinearLayout)findViewById(R.id.lay_authorize);
         /*rad_grp=(RadioGroup) findViewById(R.id.rad_grp);
         rad_biz=(RadioButton)findViewById(R.id.rad_biz);
         common.setDrawableRightRadio(R.drawable.pay_biz,rad_biz);
@@ -159,6 +168,77 @@ public class MakePaymentsActivity extends AppCompatActivity {
             }
         });
 
+
+
+        btn_pay_authorize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String method="";
+                String name_on_card="";
+                String card_number="";
+                String expiry_month="";
+                String expiry_year="";
+                String card_cvv="";
+
+
+                for (int i=0;i<list.size();i++){
+                    if (list.get(i).isSelected()){
+                        method=list.get(i).getName();
+                    }
+                }
+                if (method.isEmpty()){
+                    common.showToast("Please select payment method first");
+                    return;
+                }
+
+                name_on_card=et_name_on_card.getText().toString().trim();
+                card_number=et_card_number.getText().toString().trim();
+                expiry_month=et_expiry_month.getText().toString().trim();
+                expiry_year=et_expiry_year.getText().toString().trim();
+                card_cvv=et_card_cvv.getText().toString().trim();
+
+                if (name_on_card.isEmpty()){
+                    common.showToast("Please enter name on card");
+                    return;
+                }
+
+                if (card_number.isEmpty()){
+                    common.showToast("Please enter card number");
+                    return;
+                }
+
+                if (expiry_month.isEmpty()){
+                    common.showToast("Please enter card expiry month");
+                    return;
+                }
+
+                if (expiry_year.isEmpty()){
+                    common.showToast("Please enter card expiry year");
+                    return;
+                }
+
+                if (card_cvv.isEmpty()){
+                    common.showToast("Please enter card cvv");
+                    return;
+                }
+
+                Intent i=new Intent(getApplicationContext(),PaymentWebView.class);
+                i.putExtra("Total_amount",String.valueOf(total_amt));
+                i.putExtra("Method",method);
+                i.putExtra("Plan_id",plan_id);
+                i.putExtra("plan_name",plan_name);
+                i.putExtra("card_name",name_on_card);
+                i.putExtra("card_number",card_number);
+                i.putExtra("card_month",expiry_month);
+                i.putExtra("card_year",expiry_year);
+                i.putExtra("card_cvv",card_cvv);
+                startActivity(i);
+
+            }
+        });
+
+
+
     }
 
     private void getPaymentMethod(){
@@ -192,6 +272,8 @@ public class MakePaymentsActivity extends AppCompatActivity {
                         }
                         adapter=new MethodAdapter(MakePaymentsActivity.this,list);
                         lv_method.setAdapter(adapter);
+
+
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -368,8 +450,21 @@ public class MakePaymentsActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     for (int i=0;i<list.size();i++){
-                        if (i==position)
+                        if (i==position) {
                             list.get(i).setSelected(true);
+                            String selecteditem = list.get(i).getName();
+                            //Log.d("selecteditem method:",selecteditem);
+                            if(selecteditem.equals("Authorize")){
+                                lay_authorize.setVisibility(View.VISIBLE);
+                                btn_pay_authorize.setVisibility(View.VISIBLE);
+                                btn_pay.setVisibility(View.INVISIBLE);
+                            }
+                            else{
+                                lay_authorize.setVisibility(View.INVISIBLE);
+                                btn_pay_authorize.setVisibility(View.INVISIBLE);
+                                btn_pay.setVisibility(View.VISIBLE);
+                            }
+                        }
                         else
                             list.get(i).setSelected(false);
                     }
